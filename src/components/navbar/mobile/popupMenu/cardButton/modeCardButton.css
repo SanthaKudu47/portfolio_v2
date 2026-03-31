@@ -1,0 +1,23 @@
+ @reference "#indexcss";
+
+
+ .btn-wrapper {
+     @apply w-full
+ }
+
+ .card {
+     @apply bg-app-white-150 dark:bg-app-darkBlue-100 border-transparent border-3 border-solid w-full h-30 rounded-md flex flex-col items-center justify-between relative p-3 cursor-pointer
+ }
+
+ .card-mode {
+     @apply h-3/5 relative w-6/7 rounded-sm shadow-2xl box-border
+ }
+
+
+ .card-mode-text {
+     @apply mb-1 text-xs font-inter dark:text-app-text-white-100
+ }
+
+ .selected {
+     @apply border-3 border-solid border-app-blue-bright-100
+ }
