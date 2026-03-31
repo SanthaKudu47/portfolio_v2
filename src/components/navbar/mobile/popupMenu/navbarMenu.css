@@ -1,0 +1,76 @@
+ @reference "#indexcss";
+
+ .backdrop {
+     @apply fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-start pt-10;
+ }
+
+ /* Main popup panel */
+ .popupPanel {
+     @apply h-1/2 overflow-hidden bg-app-white-100 dark:bg-app-darkBlue-300 max-w-3/5 min-w-[280px] mt-20 rounded-md flex flex-col justify-between;
+ }
+
+ /* Header */
+ .popupPanel-header {
+     @apply bg-app-white-100 border-0 border-solid border-gray-200 dark:border-app-darkBlue-200 dark:bg-app-darkBlue-200 border-b py-2 flex flex-row items-center justify-between px-5;
+ }
+
+ .popupPanel-header-title {
+     @apply font-inter font-bold dark:text-app-text-white-100;
+ }
+
+ /* Body */
+ .popupPanel-body {
+     @apply h-full gap-y-2 flex flex-col;
+ }
+
+ /* Section wrapper */
+ .popupPanel-section {
+     @apply px-3 py-5;
+ }
+
+ .popupPanel-section-title {
+     @apply font-inter text-sm font-bold text-app-gray-500 pb-3 dark:text-app-gray-300
+ }
+
+ /* Status row */
+ .popupPanel-status-row {
+     @apply flex flex-row justify-center gap-x-3;
+ }
+
+ /* Status card */
+ .popupPanel-status-card {
+     @apply bg-app-white-150 dark:bg-app-darkBlue-100 flex flex-row items-center px-2 py-3 rounded-md gap-x-2 w-full;
+ }
+
+ /* Status text container */
+ .popupPanel-status-text {
+     @apply font-inter gap-x-1 dark:text-app-text-white-100;
+ }
+
+ /* Status label + value */
+ .popupPanel-status-label {
+     @apply text-[10px] font-inter font-bold text-app-gray-500 dark:text-app-gray-300;
+ }
+
+ .popupPanel-status-value {
+     @apply text-sm font-bold;
+ }
+
+ /* Footer */
+ .popupPanel-footer {
+     @apply border-0 border-solid border-gray-200 dark:border-app-darkBlue-200 border-t py-4;
+
+ }
+
+ .popupPanel-footer-text {
+     @apply font-inter text-[10px] text-center text-app-gray-500/70 dark:text-app-white-100
+ }
+
+
+
+
+
+
+ .darkMode-color {
+     @apply bg-amber-100
+ }

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-app-white-100: #FEFEFF;
+    --color-app-white-150: #F1F2F3;
+    --color-app-white-200: #F6F8FB;
+    --color-app-white-300: #F2F7FA;
+
+    --color-app-darkBlue-100: #252530;
+    --color-app-darkBlue-200: #191922;
+    --color-app-darkBlue-300: #13131B;
+    --color-app-darkBlue-500: #13131B;
+    --color-app-darkBlue-700: #0D0D15;
+
+    --color-app-dark-300: #24242D;
+    --color-app-dark-700: #171720;
+
+    
+    --color-app-gray-100: #617289;
+    --color-app-gray-300: #A8A7B1;
+    --color-app-gray-500: #3F4852;
+
+    --color-app-text-white-100: #EFECF8;
+
+    --color-app-blue-bright-100: #5EB4FF;
+
+
+    --font-inter: "Inter", sans-serif;
+}
