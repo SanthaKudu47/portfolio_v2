@@ -6,7 +6,7 @@
 
  /* Main popup panel */
  .popupPanel {
-     @apply h-1/2 overflow-hidden bg-app-white-100 dark:bg-app-darkBlue-300 max-w-3/5 min-w-[280px] mt-20 rounded-md flex flex-col justify-between;
+     @apply  overflow-hidden bg-app-white-100 dark:bg-app-darkBlue-300 max-w-3/5 min-w-[280px] mt-20 rounded-md flex flex-col justify-between;
  }
 
  /* Header */
@@ -41,6 +41,11 @@
  .popupPanel-status-card {
      @apply bg-app-white-150 dark:bg-app-darkBlue-100 flex flex-row items-center px-2 py-3 rounded-md gap-x-2 w-full;
  }
+
+ .popupPanel-header-close-button {
+     @apply cursor-pointer hover:bg-app-gray-100 hover:dark:bg-app-darkBlue-100 rounded-sm hover:text-app-white-100 dark:text-app-text-white-100
+ }
+
 
  /* Status text container */
  .popupPanel-status-text {

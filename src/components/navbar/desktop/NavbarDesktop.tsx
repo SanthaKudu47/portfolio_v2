@@ -1,10 +1,18 @@
 import { navLinks } from "@constants";
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 import { formatDateTimeToDesktopView } from "@utils";
 import "../navbar.css";
-import { useInitTheme } from "@hooks/theme";
+import { useAppStore } from "@store";
 
 export default function NavbarDesktop() {
-  useInitTheme();
+  const mode = useAppStore((state) => state.mode);
+  const toggleTheme = useAppStore((state) => state.toggleTheme);
+
+  function switchTheme() {
+    toggleTheme();
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -18,16 +26,21 @@ export default function NavbarDesktop() {
           ))}
         </ul>
       </div>
-      <div className="navbar-status">
+      <div className="navbar-status text-app-gray-300">
         <img src="/wifi_icon.svg" alt="wifi_icon" className="status-icon" />
         <img src="/battery_icon.svg" alt="wifi_icon" className="status-icon" />
-        <img
-          src="/color_mode_icon.svg"
-          alt="color_mode"
-          className="status-icon"
-        />
+        <>
+          <button className="cursor-pointer" onClick={switchTheme}>
+            {mode === "DARK" ? (
+              <MdDarkMode className="text-app-gray-100" />
+            ) : (
+              <MdLightMode className="text-app-gray-100" />
+            )}
+          </button>
+        </>
+
         <p>|</p>
-        <p className="shrink-0 navbar-datetime">
+        <p className="shrink-0 navbar-datetime ">
           {formatDateTimeToDesktopView()}
         </p>
       </div>
