@@ -1,17 +1,16 @@
-import NavbarMenu from "@components/navbar/mobile/popupMenu/NavbarMenu";
-import NavBarMobile from "@components/navbar/mobile/NavbarMobile";
 import { useInitTheme } from "@hooks/theme";
+import AppNavBar from "@components/navbar/Navbar";
+import Dock from "@components/dock/dock";
 
 function App() {
   //call theme init
-  useInitTheme()
+  useInitTheme();
   return (
-    <main>
-      {/* <Navbar /> */}
-      {/* <NavbarDesktop/> */}
-      <NavBarMobile />
-      <NavbarMenu />
-    </main>
+    <>
+      <AppNavBar />
+      <div className="bg-app-white-300 absolute inset-0 -z-10"></div>
+      <Dock />
+    </>
   );
 }
 

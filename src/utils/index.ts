@@ -18,3 +18,13 @@ export function formatTimeToMobileView(date = new Date()) {
     hour12: true,
   });
 }
+
+export function clamp(num: number, min: number, max: number) {
+  if (num < min) {
+    return min;
+  } else if (num > max) {
+    return max;
+  } else {
+    return num;
+  }
+}

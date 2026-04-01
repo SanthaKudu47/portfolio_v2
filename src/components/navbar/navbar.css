@@ -5,11 +5,11 @@
  }
 
  .navbar-brand {
-     @apply flex flex-row items-center justify-between cursor-pointer
+     @apply flex flex-row items-center justify-between dark:text-app-gray-300
  }
 
  .navbar-status {
-     @apply flex flex-row items-center justify-center gap-x-4 md:gap-x-3 cursor-pointer
+     @apply flex flex-row items-center justify-center gap-x-4 md:gap-x-3
  }
 
  .navbar-logo {
@@ -21,7 +21,7 @@
  }
 
  .navbar-links {
-     @apply px-2 text-sm text-gray-600
+     @apply px-2 text-sm text-gray-600 dark:text-app-gray-300
  }
 
  .status-icon {

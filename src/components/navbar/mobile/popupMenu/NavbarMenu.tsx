@@ -24,7 +24,7 @@ export default function NavbarMenu() {
               <p className="popupPanel-header-title">System Control</p>
               <MdOutlineClose
                 onClick={handlePopup}
-                className="cursor-pointer hover:bg-app-gray-100 rounded-sm hover:text-app-white-100 "
+                className="popupPanel-header-close-button"
               />
             </div>
 
