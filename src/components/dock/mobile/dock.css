@@ -1,0 +1,17 @@
+ @reference "#indexcss";
+
+ .dock-container {
+     @apply absolute bottom-0 flex justify-center w-full
+ }
+
+ .dock {
+     @apply flex h-14 rounded-sm mb-3 shadow-2xl bg-app-white-100/50 dark:bg-app-darkBlue-700 outline-1 outline-app-gray-400 dark:outline-app-gray-400/50 gap-x-5 justify-evenly px-4 relative
+ }
+
+ .dock-icon-wrapper {
+     @apply cursor-pointer relative flex justify-center my-2 rounded-xs w-10 border border-transparent
+ }
+
+ .dock-icon-wrapper-bg {
+     @apply w-6 h-full absolute flex bottom-0
+ }

@@ -1,11 +1,18 @@
+import { useAppStore } from "@store";
+import { useState, type MouseEvent } from "react";
+
 export function FolderIcon({
   width = "285",
   height = "229",
   fill = "#788AA0",
+  mouseEnter,
+  mouseLeave,
 }: {
   height?: string;
   width?: string;
   fill?: string;
+  mouseEnter: (e: MouseEvent<SVGSVGElement>) => void;
+  mouseLeave: (e: MouseEvent<SVGSVGElement>) => void;
 }) {
   return (
     <svg
@@ -14,6 +21,8 @@ export function FolderIcon({
       viewBox="0 0 285 229"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
     >
       <path
         d="M111.446 0C111.726 0 112.007 0.00392669 112.285 0.0126585L140.341 28.0849H155.455L155.258 27.8887C156.306 28.0144 157.369 28.0849 158.44 28.0849H254.773C271.467 28.0849 285 41.6262 285 58.3302V198.755C285 215.459 271.467 229 254.773 229H30.2273C13.5332 229 0 215.459 0 198.755V28.0849C0 12.574 12.5666 0 28.0682 0H111.446Z"
@@ -27,10 +36,14 @@ export function BrowserIcon({
   width = "285",
   height = "229",
   fill = "#788AA0",
+  mouseEnter,
+  mouseLeave,
 }: {
   height?: string;
   width?: string;
   fill?: string;
+  mouseEnter: (e: MouseEvent<SVGSVGElement>) => void;
+  mouseLeave: (e: MouseEvent<SVGSVGElement>) => void;
 }) {
   return (
     <svg
@@ -39,6 +52,8 @@ export function BrowserIcon({
       viewBox="0 0 228 229"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
     >
       <path
         d="M129.26 58.6024C145.058 52.8323 146.614 36.9646 145.417 29.752V17.1299L112.205 9.91732L61.937 22.5394L31.4173 50.4882L18.8504 83.8465L81.685 146.957C75.9402 172.201 93.0551 180.916 102.331 182.118V215.476H136.441L175.937 192.937C176.535 190.833 177.373 184.282 175.937 174.906C174.501 165.529 165.165 160.18 160.677 158.677H145.417V123.516C145.417 115.582 139.433 114.801 136.441 115.402H70.9134V91.9606H92.4567C99.6378 91.9606 102.031 86.5512 102.331 83.8465V58.6024H129.26Z"
@@ -58,10 +73,14 @@ export function ImagesIcon({
   width = "285",
   height = "229",
   fill = "#788AA0",
+  mouseEnter,
+  mouseLeave,
 }: {
   height?: string;
   width?: string;
   fill?: string;
+  mouseEnter: (e: MouseEvent<SVGSVGElement>) => void;
+  mouseLeave: (e: MouseEvent<SVGSVGElement>) => void;
 }) {
   return (
     <svg
@@ -70,6 +89,8 @@ export function ImagesIcon({
       viewBox="0 0 229 229"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
     >
       <path
         fillRule="evenodd"
@@ -85,10 +106,14 @@ export function ContactsIcon({
   width = "285",
   height = "229",
   fill = "#788AA0",
+  mouseEnter,
+  mouseLeave,
 }: {
   height?: string;
   width?: string;
   fill?: string;
+  mouseEnter: (e: MouseEvent<SVGSVGElement>) => void;
+  mouseLeave: (e: MouseEvent<SVGSVGElement>) => void;
 }) {
   return (
     <svg
@@ -97,6 +122,8 @@ export function ContactsIcon({
       viewBox="0 0 192 229"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
     >
       <path
         fillRule="evenodd"
@@ -114,10 +141,14 @@ export function TerminalIcon({
   width = "285",
   height = "229",
   fill = "#788AA0",
+  mouseEnter,
+  mouseLeave,
 }: {
   height?: string;
   width?: string;
   fill?: string;
+  mouseEnter: (e: MouseEvent<SVGSVGElement>) => void;
+  mouseLeave: (e: MouseEvent<SVGSVGElement>) => void;
 }) {
   return (
     <svg
@@ -126,6 +157,8 @@ export function TerminalIcon({
       viewBox="0 0 275 229"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
     >
       <path
         fillRule="evenodd"
@@ -150,10 +183,14 @@ export function BinIcon({
   width = "285",
   height = "229",
   fill = "#788AA0",
+  mouseEnter,
+  mouseLeave,
 }: {
   height?: string;
   width?: string;
   fill?: string;
+  mouseEnter: (e: MouseEvent<SVGSVGElement>) => void;
+  mouseLeave: (e: MouseEvent<SVGSVGElement>) => void;
 }) {
   return (
     <svg
@@ -162,11 +199,55 @@ export function BinIcon({
       viewBox="0 0 196 229"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
     >
       <path
         d="M131.886 12.3652H195.768V37.0938H181.248C181.309 37.7724 181.343 38.4597 181.343 39.1543V206.072C181.343 218.591 171.194 228.74 158.675 228.74H37.0928C24.5737 228.74 14.4249 218.591 14.4248 206.072V39.1543C14.4248 38.4597 14.4574 37.7724 14.5186 37.0938H0V12.3652H61.8213V0H131.886V12.3652ZM63.8818 74.1865V191.647H86.5498V74.1865H63.8818ZM109.218 191.646H131.886V74.1865H109.218V191.646Z"
         fill={fill}
       />
     </svg>
+  );
+}
+
+export function IconMouseHandlerWrapper({
+  width = "285",
+  height = "229",
+  Icon,
+}: {
+  height?: string;
+  width?: string;
+  Icon: React.ComponentType<{
+    height?: string;
+    width?: string;
+    fill?: string;
+    mouseEnter: (e: MouseEvent<SVGSVGElement>) => void;
+    mouseLeave: (e: MouseEvent<SVGSVGElement>) => void;
+  }>;
+}) {
+  const mode = useAppStore((state) => state.mode);
+  const [hoverColor, setHoverColor] = useState("");
+  const fill = hoverColor
+    ? hoverColor
+    : mode === "LIGHT"
+      ? "#617289"
+      : "#ACAAB5";
+
+  function handleMouseEnter(event: MouseEvent<SVGSVGElement>) {
+    setHoverColor("#5EB4FF");
+  }
+
+  function handleMouseLeave(event: MouseEvent<SVGSVGElement>) {
+    setHoverColor("");
+  }
+
+  return (
+    <Icon
+      fill={fill}
+      height={height}
+      width={width}
+      mouseEnter={handleMouseEnter}
+      mouseLeave={handleMouseLeave}
+    />
   );
 }

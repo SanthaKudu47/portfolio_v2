@@ -1,7 +1,7 @@
  @reference "#indexcss";
 
  .backdrop {
-     @apply fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-start pt-10;
+     @apply fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-start pt-10 z-10;
  }
 
  /* Main popup panel */
