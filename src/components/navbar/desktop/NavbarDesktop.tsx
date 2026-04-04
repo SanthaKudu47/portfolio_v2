@@ -4,6 +4,7 @@ import { MdDarkMode } from "react-icons/md";
 import { formatDateTimeToDesktopView } from "@utils";
 import "../navbar.css";
 import { useAppStore } from "@store";
+import TooltipWrapper from "@components/tooltip/wrapper";
 
 export default function NavbarDesktop() {
   const mode = useAppStore((state) => state.mode);
@@ -27,22 +28,29 @@ export default function NavbarDesktop() {
         </ul>
       </div>
       <div className="navbar-status text-app-gray-300">
-        <img src="/wifi_icon.svg" alt="wifi_icon" className="status-icon" />
+        <TooltipWrapper anchor="BOTTOM" text="network">
+          <img src="/wifi_icon.svg" alt="wifi_icon" className="status-icon" />
+        </TooltipWrapper>
+
         <img src="/battery_icon.svg" alt="wifi_icon" className="status-icon" />
         <>
-          <button className="cursor-pointer" onClick={switchTheme}>
-            {mode === "DARK" ? (
-              <MdDarkMode className="text-app-gray-100" />
-            ) : (
-              <MdLightMode className="text-app-gray-100" />
-            )}
-          </button>
+          <TooltipWrapper anchor="BOTTOM" text="theme">
+            <button className="cursor-pointer" onClick={switchTheme}>
+              {mode === "DARK" ? (
+                <MdDarkMode className="text-app-gray-100" />
+              ) : (
+                <MdLightMode className="text-app-gray-100" />
+              )}
+            </button>
+          </TooltipWrapper>
         </>
 
         <p>|</p>
-        <p className="shrink-0 navbar-datetime ">
-          {formatDateTimeToDesktopView()}
-        </p>
+        <TooltipWrapper anchor="BOTTOM" text="date time">
+          <p className="shrink-0 navbar-datetime">
+            {formatDateTimeToDesktopView()}
+          </p>
+        </TooltipWrapper>
       </div>
     </nav>
   );

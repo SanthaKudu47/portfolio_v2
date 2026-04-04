@@ -1,7 +1,7 @@
  @reference "#indexcss";
 
  .navbar {
-     @apply flex flex-row h-9 w-full relative justify-between bg-app-white-100 dark:bg-black shadow-md px-3 font-inter
+     @apply flex flex-row h-9 w-full relative justify-between bg-app-white-100 dark:bg-black shadow-md px-3 font-inter z-20
  }
 
  .navbar-brand {
@@ -29,5 +29,5 @@
  }
 
  .navbar-datetime {
-     @apply text-xs md:text-sm
+     @apply text-xs md:text-sm text-app-darkBlue-100 dark:text-app-gray-450
  }

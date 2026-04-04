@@ -7,11 +7,13 @@ import {
   BrowserIcon,
   ContactsIcon,
   FolderIcon,
+  IconMouseHandlerWrapper,
   ImagesIcon,
   TerminalIcon,
-} from "./icons";
+} from "../icons";
 import { clamp } from "@utils";
 import { useAppStore } from "@store";
+import TooltipWrapper from "@components/tooltip/wrapper";
 
 export default function Dock() {
   const mode = useAppStore((state) => state.mode);
@@ -91,32 +93,69 @@ export default function Dock() {
       <div className="dock" ref={dockRef}>
         <div className="dock-icon-wrapper">
           <div className="dock-icon-wrapper-bg">
-            <FolderIcon width="100%" height="100%" fill={fill} />
+            <TooltipWrapper anchor="TOP" text="Finder">
+              <IconMouseHandlerWrapper
+                Icon={FolderIcon}
+                width="100%"
+                height="100%"
+              />
+            </TooltipWrapper>
+          </div>
+        </div>
+
+        <div className="dock-icon-wrapper">
+          <div className="dock-icon-wrapper-bg">
+            <TooltipWrapper anchor="TOP" text="Browser">
+              <IconMouseHandlerWrapper
+                Icon={BrowserIcon}
+                width="100%"
+                height="100%"
+              />
+            </TooltipWrapper>
           </div>
         </div>
         <div className="dock-icon-wrapper">
           <div className="dock-icon-wrapper-bg">
-            <BrowserIcon width="100%" height="100%" fill={fill} />
+            <TooltipWrapper anchor="TOP" text="Gallery">
+              <IconMouseHandlerWrapper
+                Icon={ImagesIcon}
+                width="100%"
+                height="100%"
+              />
+            </TooltipWrapper>
           </div>
         </div>
         <div className="dock-icon-wrapper">
           <div className="dock-icon-wrapper-bg">
-            <ImagesIcon width="100%" height="100%" fill={fill} />
+            <TooltipWrapper anchor="TOP" text="Gallery">
+              <IconMouseHandlerWrapper
+                Icon={ContactsIcon}
+                width="100%"
+                height="100%"
+              />
+            </TooltipWrapper>
           </div>
         </div>
         <div className="dock-icon-wrapper">
           <div className="dock-icon-wrapper-bg">
-            <ContactsIcon width="100%" height="100%" fill={fill} />
+            <TooltipWrapper anchor="TOP" text="Terminal">
+              <IconMouseHandlerWrapper
+                Icon={TerminalIcon}
+                width="100%"
+                height="100%"
+              />
+            </TooltipWrapper>
           </div>
         </div>
         <div className="dock-icon-wrapper">
           <div className="dock-icon-wrapper-bg">
-            <TerminalIcon width="100%" height="100%" fill={fill} />
-          </div>
-        </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
-            <BinIcon width="100%" height="100%" fill={fill} />
+            <TooltipWrapper anchor="TOP" text="Bin">
+              <IconMouseHandlerWrapper
+                Icon={BinIcon}
+                width="100%"
+                height="100%"
+              />
+            </TooltipWrapper>
           </div>
         </div>
       </div>
