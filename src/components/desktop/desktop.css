@@ -1,0 +1,80 @@
+ @reference "#indexcss";
+
+.hero-section {
+  @apply absolute inset-0 bg-app-white-300 dark:bg-app-darkBlue-300 flex pt-9;
+}
+
+.hero-container {
+  @apply flex flex-col relative mx-auto w-full max-w-[350px] sm:max-w-[640px] md:max-w-[780px] lg:max-w-[1280px];
+}
+
+.hero-heading {
+  @apply mt-5 font-inter py-2 text-4xl mx-auto dark:text-app-darkBlue-100 text-app-darkBlue-100 font-bold;
+}
+
+.hero-intro-wrapper {
+  @apply mx-auto font-inter text-center text-lg mt-5;
+}
+
+.hero-intro-line {
+  @apply mx-auto text-gray-600  my-2;
+}
+
+.hero-name-tag {
+  @apply mx-2 bg-app-blue-bright-100 p-1 rounded-sm rotate-12 inline-block text-app-dark-700;
+}
+
+.hero-name-inner {
+  @apply flex gap-x-1 items-center;
+}
+
+.hero-role-tag {
+  @apply text-app-text-white-100 mx-2 bg-app-darkBlue-100 px-1 inline-block rounded-xs -rotate-3;
+}
+
+.hero-role-inner {
+  @apply flex gap-x-1 items-center;
+}
+
+.hero-second-line {
+  @apply mx-auto text-gray-600 opacity-0 max-w-[500px];
+}
+
+.hero-artwork-wrapper {
+  @apply flex justify-center items-center mt-12 z-30;
+}
+
+.hero-artwork-container {
+  @apply flex w-[450px] relative justify-center;
+}
+
+.hero-cv-wrapper {
+  @apply absolute h-[135px] bottom-0 w-fit left-0 right-0 mx-auto ;
+}
+
+.hero-cv-inner {
+  @apply flex inset-0 w-full h-full shadow-md border-2 border-transparent border-solid group-hover:border-app-darkBlue-100 group-hover:shadow-2xl group-hover:animate-bounce;
+}
+
+
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeUp {
+    animation: fadeUp 0.35s ease-out forwards;
+}
+
+.animate-fadeUp-delayed {
+    animation: fadeUp 0.35s ease-in-out 0.2s forwards;
+}

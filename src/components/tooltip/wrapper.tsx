@@ -22,10 +22,13 @@ export default function TooltipWrapper({
 
     const targetElement = wrapperElement.current;
     const toolTip = toolTipRef.current as HTMLDivElement;
+    const toolTipInner = toolTip.childNodes[0] as HTMLDivElement;
+
+    if (!toolTipInner) return;
 
     //assign text
-    toolTip.innerText = text;
-    toolTip.style.display = "block";
+    toolTipInner.innerText = text;
+    toolTip.style.display = "flex";
 
     //force
     toolTip.getBoundingClientRect();
@@ -80,7 +83,7 @@ export default function TooltipWrapper({
 
   return (
     <span
-    className="cursor-pointer"
+      className="cursor-pointer"
       ref={wrapperElement}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

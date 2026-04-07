@@ -5,7 +5,7 @@
  }
 
  .dock {
-     @apply flex h-16 rounded-sm mb-3 shadow-2xl bg-app-white-100/50 dark:bg-app-darkBlue-700 outline-1 outline-app-gray-400 dark:outline-app-gray-400/50 gap-x-8 justify-evenly px-5 relative
+     @apply flex h-16 rounded-sm mb-3 shadow-xl/30 bg-app-white-100 outline-app-gray-500 dark:bg-app-darkBlue-700 outline-1 dark:outline-app-gray-400/50 gap-x-8 justify-evenly px-5 relative
  }
 
  .dock-icon-wrapper {
@@ -14,4 +14,24 @@
 
  .dock-icon-wrapper-bg {
      @apply w-6 h-full absolute flex bottom-0
+ }
+
+
+ @keyframes dockIn {
+     0% {
+         opacity: 0;
+         transform: translateY(20px) scale(0.98);
+     }
+
+     100% {
+         opacity: 1;
+         transform: translateY(0) scale(1);
+     }
+
+
+ }
+
+ .animate-dockIn {
+
+     animation: dockIn 0.45s cubic-bezier(0.25, 0.1, 0.25, 1) 0.45s 1 forwards;
  }

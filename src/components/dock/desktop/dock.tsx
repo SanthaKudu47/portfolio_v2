@@ -16,8 +16,6 @@ import { useAppStore } from "@store";
 import TooltipWrapper from "@components/tooltip/wrapper";
 
 export default function Dock() {
-  const mode = useAppStore((state) => state.mode);
-  const fill = mode === "LIGHT" ? "#617289" : "#ACAAB5";
   const dockRef = useRef<HTMLDivElement | null>(null);
   gsap.registerPlugin(useGSAP);
 
@@ -89,7 +87,7 @@ export default function Dock() {
   );
 
   return (
-    <div className="dock-container">
+    <div className="dock-container animate-dockIn opacity-0">
       <div className="dock" ref={dockRef}>
         <div className="dock-icon-wrapper">
           <div className="dock-icon-wrapper-bg">
