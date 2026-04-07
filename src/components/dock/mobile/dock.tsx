@@ -11,10 +11,10 @@ import {
 
 export default function DockMobile() {
   return (
-    <div className="dock-container">
-      <div className="dock">
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
+    <div className="dock-mobile-container">
+      <div className="dock-mobile">
+        <div className="dock-mobile-icon-wrapper">
+          <div className="dock-mobile-icon-wrapper-bg">
             <IconMouseHandlerWrapper
               Icon={FolderIcon}
               width="100%"
@@ -22,8 +22,8 @@ export default function DockMobile() {
             />
           </div>
         </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
+        <div className="dock-mobile-icon-wrapper">
+          <div className="dock-mobile-icon-wrapper-bg">
             <IconMouseHandlerWrapper
               Icon={BrowserIcon}
               width="100%"
@@ -31,8 +31,8 @@ export default function DockMobile() {
             />
           </div>
         </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
+        <div className="dock-mobile-icon-wrapper">
+          <div className="dock-mobile-icon-wrapper-bg">
             <IconMouseHandlerWrapper
               Icon={ImagesIcon}
               width="100%"
@@ -40,8 +40,8 @@ export default function DockMobile() {
             />
           </div>
         </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
+        <div className="dock-mobile-icon-wrapper">
+          <div className="dock-mobile-icon-wrapper-bg">
             <IconMouseHandlerWrapper
               Icon={ContactsIcon}
               width="100%"
@@ -49,8 +49,8 @@ export default function DockMobile() {
             />
           </div>
         </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
+        <div className="dock-mobile-icon-wrapper">
+          <div className="dock-mobile-icon-wrapper-bg">
             <IconMouseHandlerWrapper
               Icon={TerminalIcon}
               width="100%"
@@ -58,8 +58,8 @@ export default function DockMobile() {
             />
           </div>
         </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
+        <div className="dock-mobile-icon-wrapper">
+          <div className="dock-mobile-icon-wrapper-bg">
             <IconMouseHandlerWrapper
               Icon={BinIcon}
               width="100%"

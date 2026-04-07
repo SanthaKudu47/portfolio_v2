@@ -7,7 +7,7 @@ export default function DockCmp() {
       <div className="lg:hidden">
         <DockMobile />
       </div>
-      <div className="hidden lg:block">
+      <div className="lg:block">
         <Dock />
       </div>
     </>

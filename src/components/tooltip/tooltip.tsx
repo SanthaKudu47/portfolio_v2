@@ -1,6 +1,6 @@
 import { useAppStore } from "@store";
 import { useEffect, useRef } from "react";
-import './tooltip.css'
+import "./tooltip.css";
 
 export default function Tooltip() {
   const toolTipContainer = useRef<HTMLDivElement | null>(null);
@@ -11,9 +11,8 @@ export default function Tooltip() {
     }
   }, []);
   return (
-    <div
-      className="tooltip"
-      ref={toolTipContainer}
-    />
+    <div className="tooltip bg-red-500" ref={toolTipContainer}>
+      <div className="tooltip-inner"/>
+    </div>
   );
 }

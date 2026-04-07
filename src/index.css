@@ -34,3 +34,8 @@
 
     --font-inter: "Inter", sans-serif;
 }
+
+#root {
+    --mouse-x: 0px;
+    --mouse-y: 0px
+}

@@ -1,5 +1,9 @@
  @reference "#indexcss";
 
  .tooltip {
-     @apply absolute left-0 top-0 text-xs bg-app-white-100 dark:bg-app-darkBlue-300 border border-solid border-b-gray-900 text-app-darkBlue-500 dark:text-app-text-white-100 p-1 z-50 rounded-sm pointer-events-none font-inter
+     @apply absolute left-0 top-0 p-1 justify-center items-center hidden
+ }
+
+ .tooltip-inner {
+     @apply text-xs bg-app-white-100 dark:bg-app-darkBlue-300 border border-solid text-app-darkBlue-500 dark:text-app-text-white-100 p-1 z-50 rounded-sm pointer-events-none font-inter
  }
