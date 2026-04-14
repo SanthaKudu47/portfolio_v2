@@ -58,7 +58,7 @@ export default function DockMobile() {
             />
           </div>
         </div>
-        <div className="dock-mobile-icon-wrapper">
+        {/* <div className="dock-mobile-icon-wrapper">
           <div className="dock-mobile-icon-wrapper-bg">
             <IconMouseHandlerWrapper
               Icon={BinIcon}
@@ -66,7 +66,7 @@ export default function DockMobile() {
               height="100%"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

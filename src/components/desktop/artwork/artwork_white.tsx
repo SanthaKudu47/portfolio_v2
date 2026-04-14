@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export default function ArtworkWhite({
   width = "537",
   height = "421",
