@@ -9,7 +9,7 @@
  }
 
  .navbar-status {
-     @apply flex flex-row items-center justify-center gap-x-4 md:gap-x-3
+     @apply flex flex-row items-center justify-center gap-x-4 md:gap-x-3 lg:gap-x-5
  }
 
  .navbar-logo {

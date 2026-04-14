@@ -1,15 +1,9 @@
-import type { Ref, RefObject } from "react";
 import type { StateCreator } from "zustand";
-type ModeType = "LIGHT" | "DARK";
-export interface SystemSlice {
-  mode: ModeType;
-  tooltipRef: RefObject<HTMLDivElement | null> | null;
-  toggleTheme: () => void;
-  setMode: (mode: ModeType) => void;
-  setContainer: (ref: RefObject<HTMLDivElement | null>) => void;
-}
+import type { NavSlice, SystemSlice } from "./sliceTypes";
+
+
 export const createSystemSlice: StateCreator<
-  SystemSlice,
+  SystemSlice & NavSlice ,
   [],
   [],
   SystemSlice

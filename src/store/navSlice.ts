@@ -1,10 +1,7 @@
 import type { StateCreator } from "zustand";
+import type { NavSlice, SystemSlice } from "./sliceTypes";
 
-export interface NavSlice {
-  isOpen: boolean;
-  toggleIsOpen: () => void;
-}
-export const createNavSlice: StateCreator<NavSlice, [], [], NavSlice> = (
+export const createNavSlice: StateCreator<NavSlice & SystemSlice, [], [], NavSlice> = (
   set,
 ) => {
   return {
