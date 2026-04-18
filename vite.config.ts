@@ -12,6 +12,7 @@ export default defineConfig({
       "@hooks": "/src/hooks",
       "@utils": "/src/utils/index.ts",
       "@store": "/src/store",
+      "@events":"/src/events"
       
     },
   },

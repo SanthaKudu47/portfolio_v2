@@ -1,0 +1,40 @@
+ @reference "#indexcss";
+
+ /* ============================================
+   TerminalCommandBlock — Tailwind Extraction
+   ============================================ */
+
+ /* Outer wrapper */
+ .tcb-container {
+     @apply my-5 px-3;
+ }
+
+ /* Command line row */
+ .tcb-command-line {
+     @apply flex flex-row items-center gap-x-2 text-2xl;
+ }
+
+ /* Prefix color */
+ .tcb-prefix {
+     @apply text-blue-700;
+ }
+
+ /* Arrow icon */
+ .tcb-arrow-icon {
+     @apply text-green-700 text-2xl;
+ }
+
+ /* Response container */
+ .tcb-response-wrapper {
+     @apply flex flex-col;
+ }
+
+ /* Hidden response block (GSAP animates this) */
+ .tcb-response-hidden {
+     @apply hidden;
+ }
+
+ /* Replay button container */
+ .tcb-replay-container {
+     @apply flex flex-row justify-end items-center px-5 cursor-pointer;
+ }

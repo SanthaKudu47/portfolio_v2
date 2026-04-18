@@ -5,5 +5,5 @@
  }
 
  .tooltip-inner {
-     @apply text-xs bg-app-white-100 dark:bg-app-darkBlue-300 border border-solid text-app-darkBlue-500 dark:text-app-text-white-100 p-1 z-50 rounded-sm pointer-events-none font-inter
+     @apply text-xs bg-app-white-100 dark:bg-app-darkBlue-300 border border-solid text-app-darkBlue-500 dark:text-app-text-white-100 p-1 z-1000 rounded-sm pointer-events-none font-inter
  }

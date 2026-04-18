@@ -11,8 +11,8 @@ export default function Tooltip() {
     }
   }, []);
   return (
-    <div className="tooltip bg-red-500" ref={toolTipContainer}>
-      <div className="tooltip-inner"/>
+    <div className="tooltip" ref={toolTipContainer}>
+      <div className="tooltip-inner" />
     </div>
   );
 }

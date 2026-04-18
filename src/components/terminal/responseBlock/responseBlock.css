@@ -1,0 +1,39 @@
+ @reference "#indexcss";
+
+ /* ============================================
+   Terminal Response Components — Tailwind Extract
+   ============================================ */
+
+ /* Shared border for left-side vertical line */
+ .whoami-border,
+ .stack-border {
+     @apply border-solid border-r-2 border-r-app-gray-400;
+ }
+
+ /* WHOAMI RESPONSE --------------------------- */
+
+ .whoami-response {
+     @apply my-5 px-3 text-lg text-app-gray-100;
+ }
+
+ .whoami-name {
+     @apply block text-lg italic;
+ }
+
+ .whoami-role {
+     @apply block font-inter font-bold text-blue-600;
+ }
+
+ /* STACK RESPONSE ---------------------------- */
+
+ .stack-grid {
+     @apply grid grid-cols-3 py-3 px-3;
+ }
+
+ .stack-item-wrapper {
+     @apply flex flex-row ;
+ }
+
+ .stack-item {
+     @apply flex items-center gap-x-3 py-2 font-inter text-lg text-app-gray-100 hover:text-blue-600 cursor-pointer
+ }
