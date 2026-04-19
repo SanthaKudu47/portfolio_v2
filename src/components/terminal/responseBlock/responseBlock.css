@@ -13,11 +13,11 @@
  /* WHOAMI RESPONSE --------------------------- */
 
  .whoami-response {
-     @apply my-5 px-3 text-lg text-app-gray-100;
+     @apply my-5 md:px-3 text-base md:text-lg text-app-gray-100;
  }
 
  .whoami-name {
-     @apply block text-lg italic;
+     @apply block text-base md:text-lg md:italic;
  }
 
  .whoami-role {
@@ -27,11 +27,11 @@
  /* STACK RESPONSE ---------------------------- */
 
  .stack-grid {
-     @apply grid grid-cols-3 py-3 px-3;
+     @apply grid grid-cols-1 md:grid-cols-3 py-3 px-1 md:px-3;
  }
 
  .stack-item-wrapper {
-     @apply flex flex-row ;
+     @apply flex flex-row;
  }
 
  .stack-item {

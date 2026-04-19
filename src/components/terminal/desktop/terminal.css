@@ -12,7 +12,7 @@
 
  /* Header block */
  .terminal-header {
-   @apply my-5 px-3 text-lg text-app-gray-100;
+   @apply my-5 px-3 text-base  md:text-lg text-app-gray-100;
  }
 
  .terminal-header-line {

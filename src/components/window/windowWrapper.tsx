@@ -12,7 +12,7 @@ import { LiaWindowMaximizeSolid } from "react-icons/lia";
 import { IoMdSearch } from "react-icons/io";
 import gsap from "gsap";
 import TooltipWrapper from "@components/tooltip/wrapper";
-import type { IconType } from "react-icons";
+
 
 interface WrapperProps {
   title: string;

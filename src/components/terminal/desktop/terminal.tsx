@@ -59,8 +59,8 @@ const TerminalWrapped = withWindowWrapper(TerminalInner);
 export default function Terminal() {
   return (
     <>
-      <div className="lg:hidden bg-red-200 flex w-full h-full relative">
-        <TerminalMobile />
+      <div className="lg:hidden flex w-full h-full relative z-10 ">
+        <TerminalMobile Icon={() => <CiLock />} title="Terminal" />
       </div>
       <div className="hidden lg:absolute inset-0 lg:flex justify-center items-center">
         <TerminalWrapped
