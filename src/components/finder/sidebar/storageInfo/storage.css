@@ -1,0 +1,32 @@
+ @reference "#indexcss";
+
+ .storage-container {
+     @apply w-full px-5 py-4 flex flex-col gap-2 ;
+ }
+
+ /* Top row: STORAGE + percentage */
+ .storage-header {
+     @apply flex flex-row justify-between items-center px-1;
+ }
+
+ .storage-title {
+     @apply text-sm font-inter text-app-gray-500 font-bold tracking-wide;
+ }
+
+ .storage-percent {
+     @apply text-sm font-inter text-app-gray-400;
+ }
+
+ /* Progress bar */
+ .storage-bar-wrapper {
+     @apply w-full h-2 bg-app-white-150 rounded-full overflow-hidden;
+ }
+
+ .storage-bar-fill {
+     @apply h-full bg-app-blue-bright-100 rounded-full transition-all duration-300;
+ }
+
+ /* Bottom text */
+ .storage-text {
+     @apply text-xs font-inter text-app-gray-500/60;
+ }

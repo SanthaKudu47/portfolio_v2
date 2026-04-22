@@ -1,0 +1,24 @@
+ @reference "#indexcss";
+
+
+
+ .command-line-block-one {
+   @apply mt-5 px-2
+ }
+
+ .terminal-container {
+   @apply bg-app-white-150 overflow-y-scroll h-full
+ }
+
+ /* Header block */
+ .terminal-header {
+   @apply my-5 px-3 text-base  md:text-lg text-app-gray-100;
+ }
+
+ .terminal-header-line {
+   @apply block;
+ }
+
+ .terminal-header-sub {
+   @apply block italic;
+ }

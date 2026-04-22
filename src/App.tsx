@@ -3,12 +3,15 @@ import AppNavBar from "@components/navbar/Navbar";
 import Tooltip from "@components/tooltip/tooltip";
 import DockCmp from "@components/dock";
 import Desktop from "@components/desktop/desktop";
-import WindowWrapper from "@components/desktop/window_wrapper/windowWrapper";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/all";
+import Terminal from "@components/terminal/desktop/terminal";
+import Finder from "@components/finder/finder";
+import Browser from "@components/browser/browser";
+import Gallery from "@components/gallery/gallery";
+import Contacts from "@components/contacts/contacts";
 
-
-gsap.registerPlugin(Draggable) 
+gsap.registerPlugin(Draggable);
 
 function App() {
   //call theme init
@@ -18,9 +21,11 @@ function App() {
       <Tooltip />
       <AppNavBar />
       <Desktop />
-      {/* <div className="bg-green-300 absolute inset-0 flex justify-center items-center">
-        <WindowWrapper/>
-      </div> */}
+      <Finder />
+      <Browser />
+      <Gallery />
+      <Contacts />
+      <Terminal />
       <DockCmp />
       {/* <WindowWrapper/> */}
       {/* <ArtWorkLg /> */}
