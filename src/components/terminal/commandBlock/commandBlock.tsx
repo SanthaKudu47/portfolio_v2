@@ -3,7 +3,6 @@ import { useGSAP } from "@gsap/react";
 import { useRef, useState, type JSX } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import gsap from "gsap";
-import { dispatchCustomEvent } from "@events/events";
 import { MdOutlineReplay } from "react-icons/md";
 
 import "./commandBlock.css";
@@ -30,18 +29,26 @@ export default function TerminalCommandBlock({
   const [renderCount, setRenderCount] = useState(0);
   const [canReplay, setReplayStatus] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { blinking, cls, command, eventName, onComplete, prefix } =
-    commandOptions;
   const { response } = responseOptions;
   const { contextSafe } = useGSAP({ scope: containerRef });
+  const { blinking, cls, command, eventName, onComplete, prefix } =
+    commandOptions;
+
+  const tcbResponseAnimatorRef = useRef<HTMLDivElement | null>(null);
 
   const resetResponse = contextSafe(() => {
-    gsap.set(".tcb-response-animator", { opacity: 0, y: 6, display: "none" });
+    if (!tcbResponseAnimatorRef.current) return;
+    gsap.set(tcbResponseAnimatorRef.current, {
+      opacity: 0,
+      y: 6,
+      display: "none",
+    });
   });
 
   const animateRes = contextSafe(() => {
+    if (!tcbResponseAnimatorRef.current) return;
     gsap.fromTo(
-      ".tcb-response-animator",
+      tcbResponseAnimatorRef.current,
       { opacity: 0, y: 6, display: "block" },
       {
         opacity: 1,
@@ -58,7 +65,7 @@ export default function TerminalCommandBlock({
   });
 
   function replay() {
-    gsap.killTweensOf(".tcb-response-animator");
+    gsap.killTweensOf(tcbResponseAnimatorRef.current);
     resetResponse();
     setRenderCount((prev) => prev + 1);
     setReplayStatus(false);
@@ -87,7 +94,7 @@ export default function TerminalCommandBlock({
       </span>
 
       <div className="tcb-response-wrapper" ref={containerRef}>
-        <div className="tcb-response-animator tcb-response-hidden">
+        <div className="tcb-response-hidden" ref={tcbResponseAnimatorRef}>
           {response ? response : null}
         </div>
 

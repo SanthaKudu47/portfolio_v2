@@ -5,8 +5,11 @@ import DockCmp from "@components/dock";
 import Desktop from "@components/desktop/desktop";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/all";
-import TerminalWrapped from "@components/terminal/desktop/terminal";
 import Terminal from "@components/terminal/desktop/terminal";
+import Finder from "@components/finder/finder";
+import Browser from "@components/browser/browser";
+import Gallery from "@components/gallery/gallery";
+import Contacts from "@components/contacts/contacts";
 
 gsap.registerPlugin(Draggable);
 
@@ -18,6 +21,10 @@ function App() {
       <Tooltip />
       <AppNavBar />
       <Desktop />
+      <Finder />
+      <Browser />
+      <Gallery />
+      <Contacts />
       <Terminal />
       <DockCmp />
       {/* <WindowWrapper/> */}

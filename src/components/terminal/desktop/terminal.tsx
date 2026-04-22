@@ -5,6 +5,7 @@ import TerminalCommandBlock from "../commandBlock/commandBlock";
 import { StackResponse, WhoamiResponse } from "../responseBlock/responseBlocks";
 import "./terminal.css";
 import TerminalMobile from "../mobile/terminalMobile";
+import { useAppStore } from "@store";
 
 type TerminalLines = { [key: string]: boolean };
 
@@ -57,17 +58,24 @@ function TerminalInner() {
 const TerminalWrapped = withWindowWrapper(TerminalInner);
 
 export default function Terminal() {
+  const { isOpened } = useAppStore((state) =>
+    state.getWindowByName("terminal"),
+  );
+  console.log("IsTerminalOpened", isOpened);
   return (
     <>
       <div className="lg:hidden flex w-full h-full relative z-10 ">
         <TerminalMobile Icon={() => <CiLock />} title="Terminal" />
       </div>
-      <div className="hidden lg:absolute inset-0 lg:flex justify-center items-center">
-        <TerminalWrapped
-          Icon={() => <CiLock />}
-          title="root@lumina-os: `/dev/stack"
-        />
-      </div>
+      {isOpened && (
+        <div className="hidden lg:absolute inset-0 lg:flex justify-center items-center">
+          <TerminalWrapped
+            windowId="terminal"
+            Icon={() => <CiLock />}
+            title="root@lumina-os: `/dev/stack"
+          />
+        </div>
+      )}
     </>
   );
 }

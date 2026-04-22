@@ -1,7 +1,7 @@
  @reference "#indexcss";
 
  .dock-container {
-     @apply absolute bottom-0 flex justify-center w-full
+     @apply absolute bottom-0 flex justify-center w-full z-50
  }
 
  .dock {

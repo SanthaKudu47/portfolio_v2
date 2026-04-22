@@ -7,15 +7,24 @@ import {
   BrowserIcon,
   ContactsIcon,
   FolderIcon,
-  IconMouseHandlerWrapper,
   ImagesIcon,
   TerminalIcon,
 } from "../icons";
 import { clamp } from "@utils";
 import { useAppStore } from "@store";
-import TooltipWrapper from "@components/tooltip/wrapper";
+import DockIcon from "./dockIcon/dockIcon";
+
+const dockItems = [
+  { id: "finder", text: "Finder", icon: FolderIcon },
+  { id: "browser", text: "Browser", icon: BrowserIcon },
+  { id: "gallery", text: "Gallery", icon: ImagesIcon },
+  { id: "contacts", text: "Contacts", icon: ContactsIcon },
+  { id: "terminal", text: "Terminal", icon: TerminalIcon },
+  { id: "bin", text: "Bin", icon: BinIcon },
+];
 
 export default function Dock() {
+  const toggleVisibility = useAppStore((state) => state.updateVisibility);
   const dockRef = useRef<HTMLDivElement | null>(null);
   gsap.registerPlugin(useGSAP);
 
@@ -89,73 +98,14 @@ export default function Dock() {
   return (
     <div className="dock-container animate-dockIn opacity-0">
       <div className="dock" ref={dockRef}>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
-            <TooltipWrapper anchor="TOP" text="Finder">
-              <IconMouseHandlerWrapper
-                Icon={FolderIcon}
-                width="100%"
-                height="100%"
-              />
-            </TooltipWrapper>
-          </div>
-        </div>
-
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
-            <TooltipWrapper anchor="TOP" text="Browser">
-              <IconMouseHandlerWrapper
-                Icon={BrowserIcon}
-                width="100%"
-                height="100%"
-              />
-            </TooltipWrapper>
-          </div>
-        </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
-            <TooltipWrapper anchor="TOP" text="Gallery">
-              <IconMouseHandlerWrapper
-                Icon={ImagesIcon}
-                width="100%"
-                height="100%"
-              />
-            </TooltipWrapper>
-          </div>
-        </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
-            <TooltipWrapper anchor="TOP" text="Gallery">
-              <IconMouseHandlerWrapper
-                Icon={ContactsIcon}
-                width="100%"
-                height="100%"
-              />
-            </TooltipWrapper>
-          </div>
-        </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
-            <TooltipWrapper anchor="TOP" text="Terminal">
-              <IconMouseHandlerWrapper
-                Icon={TerminalIcon}
-                width="100%"
-                height="100%"
-              />
-            </TooltipWrapper>
-          </div>
-        </div>
-        <div className="dock-icon-wrapper">
-          <div className="dock-icon-wrapper-bg">
-            <TooltipWrapper anchor="TOP" text="Bin">
-              <IconMouseHandlerWrapper
-                Icon={BinIcon}
-                width="100%"
-                height="100%"
-              />
-            </TooltipWrapper>
-          </div>
-        </div>
+        {dockItems.map((item) => (
+          <DockIcon
+            key={item.id}
+            text={item.text}
+            Icon={item.icon}
+            onClick={() => toggleVisibility(item.id)}
+          />
+        ))}
       </div>
     </div>
   );

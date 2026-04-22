@@ -12,9 +12,10 @@ import { LiaWindowMaximizeSolid } from "react-icons/lia";
 import { IoMdSearch } from "react-icons/io";
 import gsap from "gsap";
 import TooltipWrapper from "@components/tooltip/wrapper";
-
+import { useAppStore } from "@store";
 
 interface WrapperProps {
+  windowId: "terminal" | "bin" | "finder" | "browser" | "gallery" | "contacts";
   title: string;
   Icon: () => JSX.Element;
 }
@@ -23,14 +24,15 @@ export default function withWindowWrapper<P extends object>(
   Component: React.ComponentType<P>,
 ) {
   return function ComponentWithWindow({
+    windowId,
     title,
     Icon,
     ...props
   }: WrapperProps & P) {
-    const [isClosed, setClose] = useState<boolean>(false);
     const [isMaximized, setMaximize] = useState<boolean>(false);
     const windowRef = useRef<HTMLDivElement | null>(null);
     const draggableRef = useRef<globalThis.Draggable | null>(null);
+    const closeWindow = useAppStore((state) => state.closeWindow);
     useGSAP(() => {
       const element = windowRef.current;
       if (!element) return;
@@ -44,9 +46,7 @@ export default function withWindowWrapper<P extends object>(
     }, []);
 
     function handleWindowClose() {
-      const win = windowRef.current;
-      if (!win) return;
-      setClose(true);
+      closeWindow(windowId);
     }
 
     function handleWindowMaximize(e: React.MouseEvent<SVGElement, MouseEvent>) {
@@ -66,10 +66,7 @@ export default function withWindowWrapper<P extends object>(
     }
 
     return (
-      <div
-        className={`window-container ${isClosed ? "hidden" : "block"}`}
-        ref={windowRef}
-      >
+      <div className={`window-container`} ref={windowRef}>
         <div className="window-container-top-bar">
           <div className="top-bar-search-icon">
             <IoMdSearch />
@@ -99,7 +96,7 @@ export default function withWindowWrapper<P extends object>(
           </div>
         </div>
 
-        <div className="h-full w-full relative bg-amber-100">
+        <div className="h-full w-full relative">
           <Component {...(props as unknown as P)} />
         </div>
       </div>
