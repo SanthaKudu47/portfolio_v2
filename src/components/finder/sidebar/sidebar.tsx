@@ -9,7 +9,10 @@ function Sidebar() {
         <span className="sidebar-title">Lumina OS</span>
         <span className="sidebar-subtitle">FILE SYSTEM</span>
       </div>
-      <SidePanel />
+      <div className="row-span-6 ">
+        <SidePanel />
+      </div>
+
       <div className="sidebar-bottom">
         <StorageInfo used={128} total={1024} />
       </div>

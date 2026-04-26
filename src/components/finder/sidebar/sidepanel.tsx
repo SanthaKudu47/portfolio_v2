@@ -15,7 +15,7 @@ const sidePanelData: SidePanelItem[] = [
 
 export default function SidePanel() {
   return (
-    <div className="row-span-6 px-5 md:border-b-2 md:border-solid md:border-b-app-gray-100/20 flex flex-col w-full ">
+    <div className=" px-5 md:border-b-2 md:border-solid md:border-b-app-gray-100/20 flex flex-col w-full h-full ">
       <span className="text-lg hidden md:inline">Favorites</span>
       <div className="flex flex-row   md:flex-col md:gap-y-2 md:py-5 md:px-3 w-full justify-evenly">
         {sidePanelData.map((data, index) => {
