@@ -1,7 +1,7 @@
  @reference "#indexcss";
 
  .finder-container {
-     @apply w-full h-full grid grid-cols-4 bg-app-white-100;
+     @apply w-full h-full grid grid-cols-4 bg-app-white-150;
  }
 
  .finder-main {
@@ -21,7 +21,7 @@
  }
 
  .finder-filetile {
-     @apply h-full flex relative flex-col justify-end items-center pb-1 cursor-pointer hover:bg-app-white-200;
+     @apply h-full flex relative flex-col justify-end items-center pb-1 cursor-pointer hover:bg-gray-200/50;
  }
 
  .finder-filename {

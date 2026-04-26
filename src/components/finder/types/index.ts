@@ -13,3 +13,11 @@ export type SidePanelItem = {
   text: string;
   Icon: IconType;
 };
+
+export interface PropsToInner {
+  currentDir: FileInfoType[];
+  paths: string[];
+  reset: () => void;
+  openFolder: (param: string) => void;
+  updateDirPath: (param: string) => void;
+}

@@ -1,0 +1,21 @@
+ @reference "#indexcss";
+
+ .breadcrumb-container {
+     @apply flex items-center gap-2 font-inter text-sm select-none z-50 cursor-pointer bg-app-white-200 p-2 rounded-md text-app-gray-300;
+ }
+
+ .breadcrumb-home {
+     @apply flex items-center gap-1 hover:text-app-gray-500 transition-colors;
+ }
+
+ .breadcrumb-chevron {
+     @apply text-app-gray-300;
+ }
+
+ .breadcrumb-segment {
+     @apply hover:text-app-gray-500 transition-colors;
+ }
+
+ .breadcrumb-segment-active {
+     @apply text-blue-500 font-semibold cursor-default;
+ }

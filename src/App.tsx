@@ -6,7 +6,7 @@ import Desktop from "@components/desktop/desktop";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/all";
 import Terminal from "@components/terminal/desktop/terminal";
-import Finder from "@components/finder/finder";
+import Finder from "@components/finder/desktop/finder";
 import Browser from "@components/browser/browser";
 import Gallery from "@components/gallery/gallery";
 import Contacts from "@components/contacts/contacts";

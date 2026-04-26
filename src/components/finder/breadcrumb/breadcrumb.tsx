@@ -1,6 +1,34 @@
 import { AiFillHome } from "react-icons/ai";
 import { Fragment } from "react/jsx-runtime";
 
+import "./breadcrumb.css";
+
+function BreadcrumbFrag({
+  path,
+  isLast,
+  updateDirPath,
+}: {
+  path: string;
+  isLast: boolean;
+  updateDirPath: (param: string) => void;
+}) {
+  return (
+    <Fragment key={path}>
+      <span className="breadcrumb-chevron">{` > `}</span>
+
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          if (!isLast) updateDirPath(path);
+        }}
+        className={isLast ? "breadcrumb-segment-active" : "breadcrumb-segment"}
+      >
+        {path.toUpperCase()}
+      </button>
+    </Fragment>
+  );
+}
+
 export default function Breadcrumb({
   paths,
   resetDirAndPaths,
@@ -10,53 +38,52 @@ export default function Breadcrumb({
   resetDirAndPaths: () => void;
   updateDirPath: (param: string) => void;
 }) {
+  const pathsSmallScreens =
+    paths.length > 2 ? ["...", paths[paths.length - 1]] : paths;
+  console.log(pathsSmallScreens);
   return (
-    <div
-      className="
-      flex items-center gap-2 
-      font-inter text-sm 
-      select-none z-50 cursor-pointer 
-      bg-app-white-200 p-2 rounded-md
-      text-app-gray-300
-    "
-    >
+    <div className="breadcrumb-container">
       {/* HOME */}
       <button
         onClick={(e) => {
           e.preventDefault();
           resetDirAndPaths();
         }}
-        className="flex items-center gap-1 hover:text-app-gray-500 transition-colors"
+        className="breadcrumb-home"
       >
         <AiFillHome className="text-base" />
         <span className="font-medium">HOME</span>
       </button>
 
-      {paths.map((path, index) => {
-        const isLast = index === paths.length - 1;
+      <div className="hidden md:flex flex-row">
+        {paths.map((path, index) => {
+          const isLast = index === paths.length - 1;
 
-        return (
-          <Fragment key={path}>
-            {/* Chevron */}
-            <span className="text-app-gray-200">{`>`}</span>
+          return (
+            <BreadcrumbFrag
+              key={index}
+              isLast={isLast}
+              path={path}
+              updateDirPath={updateDirPath}
+            />
+          );
+        })}
+      </div>
 
-            {/* Breadcrumb segment */}
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                if (!isLast) updateDirPath(path);
-              }}
-              className={
-                isLast
-                  ? "text-app-blue-500 font-semibold cursor-default"
-                  : "hover:text-app-gray-500 transition-colors"
-              }
-            >
-              {path.toUpperCase()}
-            </button>
-          </Fragment>
-        );
-      })}
+      <div className="flex md:hidden">
+        {pathsSmallScreens.map((path, index) => {
+          const isLast = index === pathsSmallScreens.length - 1;
+
+          return (
+            <BreadcrumbFrag
+              key={index}
+              isLast={isLast}
+              path={path}
+              updateDirPath={updateDirPath}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

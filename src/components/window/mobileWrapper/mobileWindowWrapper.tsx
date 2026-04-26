@@ -9,8 +9,8 @@ export default function withMobileWindowWrapper<P extends object>(
 ) {
   return function ({ title, Icon, ...props }: WrapperProps & P) {
     return (
-      <div className="w-full">
-        <div className="flex flex-col bg-app-white-150 w-full relative ">
+      <div className="relative flex flex-col w-full bg-app-white-150">
+        <div className="flex flex-col  w-full relative mt-10 ">
           <div className="flex flex-row items-center justify-start gap-x-2 py-4">
             <span className="px-5 text-xl">
               <IoMdArrowBack />

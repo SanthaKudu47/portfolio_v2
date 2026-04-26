@@ -72,7 +72,7 @@ export default function withWindowWrapper<P extends object>(
             <IoMdSearch />
           </div>
           <div className="top-bar-title">
-            {Icon ? <Icon /> : null} <span>{title}</span>
+            {Icon ? <Icon /> : null}  <span>{title}</span>
           </div>
 
           <div className="top-bar-controllers">

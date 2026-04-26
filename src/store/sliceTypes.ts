@@ -10,6 +10,7 @@ export const InitialWindowsState: WindowsType = {
   gallery: { isOpened: false, index: 300 },
   contacts: { isOpened: false, index: 300 },
   bin: { isOpened: false, index: 300 },
+  imageViewer: { isOpened: false, index: 300 },
 };
 
 export interface SystemSlice {
