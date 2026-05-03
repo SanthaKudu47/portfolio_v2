@@ -7,7 +7,7 @@ import ImageIcon from "../Icons/img";
 import PdfIcon from "../Icons/pdf";
 import StorageInfo from "../sidebar/storageInfo/storageInfo";
 import FinderFooter from "../footer/finderFooter";
-import SidePanel from "../sidebar/sidepanel";
+import SidePanel from "../sidebar/sidepanel/sidepanel";
 import ThumbnailViewer from "../thumbnail/ThumbnailViewer";
 
 function FinderInnerMobile({

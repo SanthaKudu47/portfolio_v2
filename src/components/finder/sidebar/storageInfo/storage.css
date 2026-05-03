@@ -10,11 +10,11 @@
  }
 
  .storage-title {
-     @apply text-xs font-inter text-app-gray-500 font-bold tracking-wide md:text-sm;
+     @apply text-xs font-inter text-app-gray-500 dark:text-app-gray-300 font-bold tracking-wide md:text-sm;
  }
 
  .storage-percent {
-     @apply text-xs font-inter text-app-gray-400 md:text-sm;
+     @apply text-xs font-inter text-app-gray-400 md:text-sm dark:text-app-gray-300;
  }
 
  .storage-bar-wrapper {
@@ -22,9 +22,9 @@
  }
 
  .storage-bar-fill {
-     @apply h-full bg-app-blue-bright-100 rounded-full transition-all duration-300;
+     @apply h-full bg-gray-900 dark:bg-app-blue-matt rounded-full transition-all duration-300;
  }
 
  .storage-text {
-     @apply text-[10px] font-inter text-app-gray-500/60 md:text-xs;
+     @apply text-[10px] font-inter text-app-gray-500/60 dark:text-gray-200/50 md:text-xs;
  }

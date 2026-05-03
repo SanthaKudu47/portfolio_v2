@@ -1,5 +1,5 @@
 import "./sidebar.css";
-import SidePanel from "./sidepanel";
+import SidePanel from "./sidepanel/sidepanel";
 import StorageInfo from "./storageInfo/storageInfo";
 
 function Sidebar() {

@@ -17,5 +17,5 @@
  }
 
  .breadcrumb-segment-active {
-     @apply text-blue-500 font-semibold cursor-default;
+     @apply text-app-dark-700 dark:text-app-blue-matt font-semibold cursor-default;
  }
