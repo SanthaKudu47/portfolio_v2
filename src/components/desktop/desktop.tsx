@@ -1,9 +1,6 @@
 import { getGreetingByTime } from "@utils";
-import ArtworkWhite from "./artwork/artwork_white";
 import "./desktop.css";
 import Background from "./background/Background";
-import Cv from "./cv";
-import TooltipWrapper from "@components/tooltip/wrapper";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io5";
 import "./desktop.css";
@@ -21,7 +18,7 @@ export default function Desktop() {
             <p className="hero-heading">
               {`${getGreetingByTime()},`}
               <span className="hero-heading-visitor">
-                <TypingText speed={90} text="developer" />
+                <TypingText textCls="" speed={90} text="developer" />
               </span>
             </p>
 

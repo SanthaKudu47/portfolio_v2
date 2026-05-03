@@ -64,8 +64,12 @@ export default function Terminal() {
     <>
       {isOpened && (
         <>
-          <div className="lg:hidden flex w-full h-full relative z-10 ">
-            <TerminalMobile Icon={() => <CiLock />} title="Terminal" />
+          <div className="lg:hidden flex w-full h-full relative z-20">
+            <TerminalMobile
+              Icon={() => <CiLock />}
+              title="Terminal"
+              windowId="terminal"
+            />
           </div>
           <div className="hidden lg:absolute inset-0 lg:flex justify-center items-center">
             <TerminalWrapped
@@ -74,6 +78,8 @@ export default function Terminal() {
               title="root@lumina-os: `/dev/stack"
             />
           </div>
+
+          {/* </div> */}
         </>
       )}
     </>

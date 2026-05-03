@@ -25,11 +25,14 @@ export const folderData: FileInfoType[] = [
                     pathId: "homepage_design",
                     type: "image",
                     fileName: "homepage-design.png",
+                    url: "images/desktop.jpg",
+                    
                   },
                   {
                     pathId: "finder_mock",
                     type: "image",
                     fileName: "finder-ui-mock.png",
+                    url: "images/desktop2.png",
                   },
                   {
                     pathId: "ui_specs",
@@ -47,6 +50,7 @@ export const folderData: FileInfoType[] = [
                     pathId: "api_contract",
                     type: "pdf",
                     fileName: "api-contract.pdf",
+                    url:'pdfs/doc_craft.pdf'
                   },
                   {
                     pathId: "db_schema",
@@ -67,6 +71,7 @@ export const folderData: FileInfoType[] = [
             pathId: "resume_pdf",
             type: "pdf",
             fileName: "cv.pdf",
+            url:'pdfs/Sahan_Chathura_CV.pdf'
           },
         ],
       },

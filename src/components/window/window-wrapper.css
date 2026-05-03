@@ -2,19 +2,19 @@
 
 
  .window-container {
-     @apply absolute shadow-lg z-50 mx-auto my-auto rounded-sm overflow-hidden flex-col w-3/4 h-4/6
+     @apply absolute shadow-lg z-50 mx-auto my-auto rounded-sm overflow-hidden flex flex-col w-3/4 h-4/6
  }
 
  .top-bar-search-icon {
-     @apply cursor-pointer h-full w-7 justify-center items-center flex
+     @apply cursor-pointer h-full w-7 justify-center items-center flex dark:text-gray-300
  }
 
  .top-bar-title {
-     @apply font-inter flex flex-row gap-x-1 items-center
+     @apply font-inter flex flex-row gap-x-1 items-center dark:text-gray-300
  }
 
  .top-bar-controllers {
-     @apply flex flex-row gap-x-1 items-center
+     @apply flex flex-row gap-x-1 items-center dark:text-gray-300
  }
 
  .top-bar-controllers-block {
@@ -22,5 +22,5 @@
  }
 
  .window-container-top-bar {
-     @apply flex w-full h-6 bg-app-white-100 justify-between
+     @apply flex w-full h-6 bg-app-white-100 dark:bg-black justify-between
  }

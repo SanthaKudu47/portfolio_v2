@@ -6,6 +6,7 @@ export type FileInfoType = {
   pathId?: string;
   type: FileTypes;
   fileName: string;
+  url?: string;
   subFolder?: FileInfoType[];
 };
 
@@ -18,6 +19,6 @@ export interface PropsToInner {
   currentDir: FileInfoType[];
   paths: string[];
   reset: () => void;
-  openFolder: (param: string) => void;
+  openFolder: (param: string, type:FileTypes,url?:string) => void;
   updateDirPath: (param: string) => void;
 }

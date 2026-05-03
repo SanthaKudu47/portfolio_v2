@@ -1,7 +1,7 @@
  @reference "#indexcss";
 
  .breadcrumb-container {
-     @apply flex items-center gap-2 font-inter text-sm select-none z-50 cursor-pointer bg-app-white-200 p-2 rounded-md text-app-gray-300;
+     @apply flex items-center gap-2 font-inter text-sm select-none z-50 cursor-pointer bg-app-white-200 dark:bg-app-darkBlue-200 p-2 rounded-none md:rounded-md text-app-gray-300;
  }
 
  .breadcrumb-home {

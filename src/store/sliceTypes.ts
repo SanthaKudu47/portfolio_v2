@@ -11,6 +11,7 @@ export const InitialWindowsState: WindowsType = {
   contacts: { isOpened: false, index: 300 },
   bin: { isOpened: false, index: 300 },
   imageViewer: { isOpened: false, index: 300 },
+  pdfViewer: { isOpened: false, index: 300 },
 };
 
 export interface SystemSlice {
@@ -29,9 +30,15 @@ export interface NavSlice {
 export interface WindowSlice {
   windows: WindowsType;
   currentIndex: number;
+  filePath?: string;
+  pdfPath?: string;
   getCurrentIndex: () => number;
   getWindowByName: (name: string) => { isOpened: boolean; index: number };
+  getIndexByName: (name: string) => number;
   updateVisibility: (name: string) => void;
   closeWindow: (name: string) => void;
   openWindow: (name: string) => void;
+  updateIndex: (index: number) => void;
+  setFilePath: (url: string) => void;
+  setPdfFilePath: (url: string) => void;
 }
