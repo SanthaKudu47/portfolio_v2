@@ -62,7 +62,7 @@ export function WhoamiResponse() {
         <p className="whoami-response">
           <span className="whoami-name">Sahan Chathura</span>
           <span className="whoami-role">Full stack-developer,</span>
-          <span>"who loves turning ideas into polished systems."</span>
+          <span className="italic">"who loves turning ideas into polished systems."</span>
         </p>
       </div>
     </>

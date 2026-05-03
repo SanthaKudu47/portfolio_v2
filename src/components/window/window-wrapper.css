@@ -6,11 +6,11 @@
  }
 
  .top-bar-search-icon {
-     @apply cursor-pointer h-full w-7 justify-center items-center flex dark:text-gray-300
+     @apply cursor-pointer h-full w-7 justify-center items-center flex dark:text-gray-300 text-app-title-bar-text-light
  }
 
  .top-bar-title {
-     @apply font-inter flex flex-row gap-x-1 items-center dark:text-gray-300
+     @apply font-inter flex flex-row gap-x-1 items-center dark:text-gray-300 text-app-title-bar-text-light font-medium
  }
 
  .top-bar-controllers {
@@ -22,5 +22,5 @@
  }
 
  .window-container-top-bar {
-     @apply flex w-full h-6 bg-app-white-100 dark:bg-black justify-between
+     @apply flex w-full h-7 bg-app-white-100 dark:bg-black justify-between border-solid border-b-app-title-bar-border-light border-b-2
  }

@@ -26,7 +26,7 @@ function TerminalInner() {
       <TerminalCommandBlock
         commandOptions={{
           blinking: false,
-          cls: "text-bold",
+          cls: "text-bold text-app-gray-300 font-pt-mono",
           command: "whoami",
           eventName: "whoami-event-1",
           prefix: "~/dev",
@@ -40,7 +40,7 @@ function TerminalInner() {
         <TerminalCommandBlock
           commandOptions={{
             blinking: false,
-            cls: "text-bold",
+            cls: "text-bold text-app-gray-300 font-pt-mono",
             command: "ls --stack",
             eventName: "stack-event",
             prefix: "~/skills",

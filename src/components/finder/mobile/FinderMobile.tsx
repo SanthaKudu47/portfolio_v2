@@ -9,6 +9,7 @@ import StorageInfo from "../sidebar/storageInfo/storageInfo";
 import FinderFooter from "../footer/finderFooter";
 import SidePanel from "../sidebar/sidepanel/sidepanel";
 import ThumbnailViewer from "../thumbnail/ThumbnailViewer";
+import "./FinderMobile.css";
 
 function FinderInnerMobile({
   currentDir,
@@ -19,8 +20,8 @@ function FinderInnerMobile({
 }: PropsToInner) {
   console.log(openFolder);
   return (
-    <div className=" bg-app-white-150 dark:bg-app-darkBlue-700 grid relative h-full grid-rows-12">
-      <div className="row-span-1">
+    <div className="finder-mobile">
+      <div className="finder-mobile-breadcrumb">
         <Breadcrumb
           paths={paths}
           resetDirAndPaths={reset}
@@ -28,8 +29,8 @@ function FinderInnerMobile({
         />
       </div>
 
-      <div className="w-full row-span-8 overflow-scroll ">
-        <div className="grid grid-cols-3 gap-3 px-2 font font-inter dark:text-app-gray-300">
+      <div className="finder-mobile-content">
+        <div className="finder-mobile-grid">
           {currentDir.map((data, index) => (
             <button
               key={index}
@@ -37,10 +38,10 @@ function FinderInnerMobile({
                 data.pathId && openFolder(data.pathId, data.type, data.url)
               }
             >
-              <div className="flex flex-col  h-[150px] justify-between items-center relative p-1">
-                <div className="w-full h-full  flex justify-center items-center relative">
+              <div className="finder-mobile-item-button">
+                <div className="finder-mobile-item-icon-container">
                   {data.type === "folder" && (
-                    <div className="w-1/2 relative h-1/2">
+                    <div className="finder-mobile-item-icon-size">
                       <FolderIcon width="100%" height="100%" />
                     </div>
                   )}
@@ -48,11 +49,11 @@ function FinderInnerMobile({
                   {data.type === "image" && (
                     <>
                       {data.url ? (
-                        <div className="flex w-full h-full justify-center items-center">
+                        <div className="finder-mobile-image-url-container">
                           <ThumbnailViewer src={`${data.url}`} />
                         </div>
                       ) : (
-                        <div className="mx-auto my-auto justify-center items-center flex ">
+                        <div className="finder-mobile-image-icon-container">
                           <ImageIcon width="30%" height="30%" />
                         </div>
                       )}
@@ -60,13 +61,13 @@ function FinderInnerMobile({
                   )}
 
                   {data.type === "pdf" && (
-                    <div className="w-1/2 relative h-1/2">
+                    <div className="finder-mobile-pdf-icon-size">
                       <PdfIcon width="100%" height="100%" />
                     </div>
                   )}
                 </div>
                 <div className="w-full h-1/3">
-                  <span className="text-center text-xs font-inter line-clamp-2">
+                  <span className="finder-mobile-filename">
                     {data.fileName}
                   </span>
                 </div>
@@ -75,10 +76,10 @@ function FinderInnerMobile({
           ))}
         </div>
       </div>
-      <div className="row-span-1 flex justify-center items-center">
+      <div className="finder-mobile-sidebar">
         <SidePanel />
       </div>
-      <div className="row-span-2 flex flex-col justify-end bg-app-white-100 dark:bg-black">
+      <div className="finder-mobile-footer-section">
         <FinderFooter items={currentDir.length} size={24587} />
         <StorageInfo used={128} total={1024} />
       </div>
