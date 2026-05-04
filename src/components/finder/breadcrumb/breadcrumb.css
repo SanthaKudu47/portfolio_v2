@@ -9,11 +9,11 @@
  }
 
  .breadcrumb-chevron {
-     @apply text-app-gray-460 px-1;
+     @apply text-app-gray-460 px-1 cursor-pointer;
  }
 
  .breadcrumb-segment {
-     @apply hover:text-app-gray-500 transition-colors text-app-gray-460;
+     @apply hover:text-app-gray-500 transition-colors text-app-gray-460 cursor-pointer;
  }
 
  .breadcrumb-segment-active {

@@ -10,7 +10,7 @@
  }
 
  .top-bar-title {
-     @apply font-inter flex flex-row gap-x-2 items-center dark:text-gray-300 text-app-title-bar-text-light font-medium text-sm
+     @apply font-inter flex flex-row gap-x-2 items-center dark:text-app-gray-400 text-app-title-bar-text-light font-medium text-sm
  }
 
  .top-bar-controllers {
@@ -22,5 +22,5 @@
  }
 
  .window-container-top-bar {
-     @apply flex w-full h-7 bg-app-white-100 dark:bg-black justify-between border-solid border-b-app-title-bar-border-light border-b-2
+     @apply flex w-full h-7 bg-app-white-100 dark:bg-app-darkBlue-200 justify-between border-solid  dark:border-b-app-darkBlue-100 border-b-app-title-bar-border-light border-b-2
  }

@@ -16,7 +16,7 @@
 
  /* Prefix color */
  .tcb-prefix {
-     @apply text-app-blue-bright-100 dark:text-app-blue-matt font-pt-mono ;
+     @apply text-app-blue-bright-100 dark:text-app-blue-bright-100 font-pt-mono ;
  }
 
  /* Arrow icon */

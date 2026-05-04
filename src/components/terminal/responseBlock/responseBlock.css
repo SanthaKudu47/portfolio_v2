@@ -13,15 +13,15 @@
  /* WHOAMI RESPONSE --------------------------- */
 
  .whoami-response {
-     @apply my-5 md:px-3 text-base md:text-lg text-app-gray-300 dark:text-gray-400;
+     @apply my-5 md:px-3 text-base md:text-lg text-app-gray-300 dark:text-app-gray-300;
  }
 
  .whoami-name {
-     @apply block text-base md:text-lg text-app-gray-100  dark:text-gray-400;
+     @apply block text-base md:text-lg text-app-gray-100  dark:text-app-text-white-100;
  }
 
  .whoami-role {
-     @apply block font-inter font-bold text-app-blue-matt dark:text-app-blue-matt;
+     @apply block font-inter font-bold text-app-blue-matt dark:text-app-blue-bright-100;
  }
 
  /* STACK RESPONSE ---------------------------- */

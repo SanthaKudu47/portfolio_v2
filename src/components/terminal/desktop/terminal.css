@@ -7,7 +7,7 @@
  }
 
  .terminal-container {
-   @apply bg-app-white-200 dark:bg-app-darkBlue-100 overflow-y-scroll h-full
+   @apply bg-app-white-200 dark:bg-app-darkBlue-500 overflow-y-scroll h-full
  }
 
  /* Header block */
@@ -16,9 +16,9 @@
  }
 
  .terminal-header-line {
-   @apply block text-app-gray-100 font-normal text-lg;
+   @apply block text-app-gray-100 dark:text-app-text-white-100 font-normal text-lg;
  }
 
  .terminal-header-sub {
-   @apply block italic text-app-gray-100/60;
+   @apply block italic text-app-gray-100/60 dark:text-app-gray-400;
  }
