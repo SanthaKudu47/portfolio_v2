@@ -9,7 +9,7 @@
 }
 
 .finder-mobile-content {
-  @apply w-full row-span-8 overflow-scroll;
+  @apply w-full row-span-8 overflow-scroll bg-app-white-100;
 }
 
 .finder-mobile-grid {

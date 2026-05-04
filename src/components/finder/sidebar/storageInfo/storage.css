@@ -14,7 +14,7 @@
  }
 
  .storage-percent {
-     @apply text-xs font-inter text-app-gray-400 md:text-sm dark:text-app-gray-300;
+     @apply text-xs font-inter text-app-gray-500 md:text-sm dark:text-app-gray-300;
  }
 
  .storage-bar-wrapper {
@@ -22,7 +22,7 @@
  }
 
  .storage-bar-fill {
-     @apply h-full bg-gray-900 dark:bg-app-blue-matt rounded-full transition-all duration-300;
+     @apply h-full bg-app-blue-matt dark:bg-app-blue-matt rounded-full transition-all duration-300;
  }
 
  .storage-text {
