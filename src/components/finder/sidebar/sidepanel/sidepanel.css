@@ -4,12 +4,12 @@
   @apply px-5 
          md:border-b-2 md:border-solid md:border-b-app-gray-100/20 
          flex flex-col w-full h-full  
-         bg-app-white-100 
+         bg-app-gray-50
          md:bg-app-white-200 
          dark:bg-app-darkBlue-700 
          justify-center md:justify-start 
-         border-b-2 border-solid border-b-app-gray-100/20 
-         dark:border-b-app-dark-300;
+         border-y border-solid border-y-app-gray-60
+         dark:border-x-app-dark-300;
 }
 
 .sidepanel-title {

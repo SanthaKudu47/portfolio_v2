@@ -18,7 +18,6 @@ function FinderInnerMobile({
   reset,
   updateDirPath,
 }: PropsToInner) {
-  console.log(openFolder);
   return (
     <div className="finder-mobile">
       <div className="finder-mobile-breadcrumb">
@@ -38,40 +37,40 @@ function FinderInnerMobile({
                 data.pathId && openFolder(data.pathId, data.type, data.url)
               }
             >
-              <div className="finder-mobile-item-button">
-                <div className="finder-mobile-item-icon-container">
-                  {data.type === "folder" && (
-                    <div className="finder-mobile-item-icon-size">
-                      <FolderIcon width="100%" height="100%" />
-                    </div>
-                  )}
+               <div className="finder-mobile-item-button">
+                 <div className="finder-mobile-item-icon-container">
+                   {data.type === "folder" && (
+                     <div className="finder-mobile-item-icon-size">
+                       <FolderIcon width="100%" height="100%" />
+                     </div>
+                   )}
 
-                  {data.type === "image" && (
-                    <>
-                      {data.url ? (
-                        <div className="finder-mobile-image-url-container">
-                          <ThumbnailViewer src={`${data.url}`} />
-                        </div>
-                      ) : (
-                        <div className="finder-mobile-image-icon-container">
-                          <ImageIcon width="30%" height="30%" />
-                        </div>
-                      )}
-                    </>
-                  )}
+                   {data.type === "image" && (
+                     <>
+                       {data.url ? (
+                         <div className="finder-mobile-image-url-container">
+                           <ThumbnailViewer src={`${data.url}`} />
+                         </div>
+                       ) : (
+                         <div className="finder-mobile-image-icon-container">
+                           <ImageIcon width="30%" height="30%" />
+                         </div>
+                       )}
+                     </>
+                   )}
 
-                  {data.type === "pdf" && (
-                    <div className="finder-mobile-pdf-icon-size">
-                      <PdfIcon width="100%" height="100%" />
-                    </div>
-                  )}
-                </div>
-                <div className="w-full h-1/3">
-                  <span className="finder-mobile-filename">
-                    {data.fileName}
-                  </span>
-                </div>
-              </div>
+                   {data.type === "pdf" && (
+                     <div className="finder-mobile-pdf-icon-size">
+                       <PdfIcon width="100%" height="100%" />
+                     </div>
+                   )}
+                 </div>
+                 <div className="finder-mobile-filename-wrapper">
+                   <span className="finder-mobile-filename">
+                     {data.fileName}
+                   </span>
+                 </div>
+               </div>
             </button>
           ))}
         </div>
@@ -79,10 +78,12 @@ function FinderInnerMobile({
       <div className="finder-mobile-sidebar">
         <SidePanel />
       </div>
-      <div className="finder-mobile-footer-section">
-        <FinderFooter items={currentDir.length} size={24587} />
-        <StorageInfo used={128} total={1024} />
-      </div>
+       <div className="finder-mobile-footer-section">
+         <div className="finder-mobile-footer-wrapper">
+           <FinderFooter items={currentDir.length} size={24587} />
+         </div>
+         <StorageInfo used={128} total={1024} />
+       </div>
     </div>
   );
 }

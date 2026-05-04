@@ -21,11 +21,14 @@
     --color-app-dark-700: #171720;
 
 
+    --color-app-gray-50: #F8F8F8;
+    --color-app-gray-60: #EAEAEA;
     --color-app-gray-100: #617289;
     --color-app-gray-300: #A8A7B1;
     --color-app-gray-400: #ABA9B4;
-    --color-app-gray-500: #3F4852;
     --color-app-gray-450: #ACAAB5;
+    --color-app-gray-460: #777680;
+    --color-app-gray-500: #3F4852;
 
 
     --color-app-text-white-100: #EFECF8;
@@ -35,6 +38,8 @@
 
     --color-app-title-bar-text-light: #3F4852;
     --color-app-title-bar-border-light: #F1F2F3;
+
+
 
 
     --font-inter: "Inter", sans-serif;

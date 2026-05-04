@@ -105,7 +105,7 @@ export default function Finder() {
     <>
       {isOpened && (
         <>
-          <div className="lg:hidden flex  absolute inset-0  z-10">
+          <div className="lg:hidden flex  absolute inset-0  z-20">
             <div className="mt-9  w-full">
               <FinderMobile
                 Icon={TitleBarIcon}

@@ -5,15 +5,15 @@
  }
 
  .breadcrumb-home {
-     @apply flex flex-row gap-x-2 hover:text-app-gray-500 transition-colors cursor-pointer;
+     @apply flex flex-row gap-x-2 hover:text-app-gray-500 transition-colors cursor-pointer text-app-gray-460;
  }
 
  .breadcrumb-chevron {
-     @apply text-app-gray-300 px-1;
+     @apply text-app-gray-460 px-1;
  }
 
  .breadcrumb-segment {
-     @apply hover:text-app-gray-500 transition-colors;
+     @apply hover:text-app-gray-500 transition-colors text-app-gray-460;
  }
 
  .breadcrumb-segment-active {
