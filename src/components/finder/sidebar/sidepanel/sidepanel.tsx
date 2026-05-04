@@ -5,14 +5,18 @@ import {
   IoTrashOutline,
 } from "react-icons/io5";
 
+import { TfiSplitVAlt } from "react-icons/tfi";
+import { TfiWrite } from "react-icons/tfi";
+import { TfiTrash } from "react-icons/tfi";
+
 import "./sidepanel.css"; // Import the new CSS file
 import type { SidePanelItem } from "@components/finder/types";
 
 const sidePanelData: SidePanelItem[] = [
-  { text: "Work", Icon: IoCodeWorkingOutline },
+  { text: "Work", Icon: TfiSplitVAlt },
   { text: "About Me", Icon: IoPersonOutline },
-  { text: "Resume", Icon: IoDocumentTextOutline },
-  { text: "Trash", Icon: IoTrashOutline },
+  { text: "Resume", Icon: TfiWrite },
+  { text: "Trash", Icon: TfiTrash },
 ];
 
 export default function SidePanel() {

@@ -1,15 +1,15 @@
  @reference "#indexcss";
 
  .breadcrumb-container {
-     @apply flex items-center gap-2 font-inter text-sm select-none z-50 cursor-pointer bg-app-white-200 dark:bg-app-darkBlue-200 p-2 rounded-none md:rounded-md text-app-gray-300;
+     @apply flex items-center font-inter text-sm select-none z-50 rounded-none md:rounded-md text-app-gray-300;
  }
 
  .breadcrumb-home {
-     @apply flex items-center gap-1 hover:text-app-gray-500 transition-colors;
+     @apply flex flex-row gap-x-2 hover:text-app-gray-500 transition-colors cursor-pointer;
  }
 
  .breadcrumb-chevron {
-     @apply text-app-gray-300;
+     @apply text-app-gray-300 px-1;
  }
 
  .breadcrumb-segment {

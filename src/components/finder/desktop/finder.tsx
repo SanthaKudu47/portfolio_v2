@@ -13,6 +13,7 @@ import withDirHandlerWrapper from "./dirHandler";
 import "./finder.css";
 import ThumbnailViewer from "../thumbnail/ThumbnailViewer";
 import TooltipWrapper from "@components/tooltip/wrapper";
+import { TfiWindow } from "react-icons/tfi";
 
 function FinderInner({
   currentDir,
@@ -28,11 +29,13 @@ function FinderInner({
       {/* Main */}
       <div className="finder-main">
         <div className="finder-breadcrumb-row">
-          <Breadcrumb
-            paths={paths}
-            resetDirAndPaths={reset}
-            updateDirPath={updateDirPath}
-          />
+          <div className="w-full flex h-10 px-2  border-solid border-b-app-title-bar-border-light border-b dark:border-b-gray-300/50 font-inter text-lg bg-app-white-100 dark:bg-app-darkBlue-700 ">
+            <Breadcrumb
+              paths={paths}
+              resetDirAndPaths={reset}
+              updateDirPath={updateDirPath}
+            />
+          </div>
         </div>
 
         <div className="finder-filegrid-wrapper">
@@ -80,8 +83,10 @@ function FinderInner({
           </div>
         </div>
 
-        <div className="w-full row-span-1 border-t border-solid border-t-gray-200  bg-app-white-200 dark:bg-app-darkBlue-700 ">
-          <FinderFooter items={currentDir.length} size={24587} />
+        <div className="w-full row-span-1 items-end flex">
+          <div className="w-full h-10  bg-app-white-100 dark:bg-app-darkBlue-700  border-solid border-t-app-title-bar-border-light border-t">
+            <FinderFooter items={currentDir.length} size={24587} />
+          </div>
         </div>
       </div>
     </div>
@@ -92,34 +97,31 @@ const FinderWrapped = withWindowWrapper(withDirHandlerWrapper(FinderInner));
 
 export default function Finder() {
   const { isOpened } = useAppStore((state) => state.getWindowByName("finder"));
+  const title = "File Explorer";
+  const TitleBarIcon = () => <TfiWindow />;
+  const windowId = "finder";
 
   return (
     <>
       {isOpened && (
         <>
-          <div className="lg:hidden flex  absolute inset-0 bg-amber-300 z-10">
-            <div className="mt-9 bg-amber-700 w-full">
+          <div className="lg:hidden flex  absolute inset-0  z-10">
+            <div className="mt-9  w-full">
               <FinderMobile
-                Icon={() => <MdLaptopWindows />}
-                title="Finder"
-                windowId="finder"
+                Icon={TitleBarIcon}
+                title={title}
+                windowId={windowId}
               />
             </div>
           </div>
-          {/* <div
-            style={{ zIndex: currentIndex }}
-            className="absolute"
-            // className={`hidden lg:absolute inset-0 lg:flex justify-center items-center`}
-          > */}
+
           <div className="hidden lg:absolute inset-0 lg:flex justify-center items-center">
             <FinderWrapped
-              windowId="finder"
-              title="Finder"
-              Icon={() => <MdLaptopWindows />}
+              windowId={windowId}
+              title={title}
+              Icon={TitleBarIcon}
             />
           </div>
-
-          {/* </div> */}
         </>
       )}
     </>

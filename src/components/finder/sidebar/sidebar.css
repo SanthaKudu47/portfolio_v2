@@ -5,15 +5,15 @@
  }
 
  .sidebar-header {
-     @apply row-span-2 flex flex-col font-inter px-5 pt-4 dark:text-app-white-200;
+     @apply row-span-2 flex flex-col font-inter dark:text-app-white-200 justify-center px-5;
  }
 
  .sidebar-title {
-     @apply text-3xl;
+     @apply text-3xl font-inter;
  }
 
  .sidebar-subtitle {
-     @apply text-lg text-app-gray-300;
+     @apply text-base text-app-gray-300;
  }
 
  .sidebar-bottom {

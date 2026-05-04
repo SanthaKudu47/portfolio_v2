@@ -10,7 +10,7 @@
  }
 
  .top-bar-title {
-     @apply font-inter flex flex-row gap-x-1 items-center dark:text-gray-300 text-app-title-bar-text-light font-medium
+     @apply font-inter flex flex-row gap-x-2 items-center dark:text-gray-300 text-app-title-bar-text-light font-medium text-sm
  }
 
  .top-bar-controllers {

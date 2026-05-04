@@ -1,15 +1,15 @@
  @reference "#indexcss";
 
- /* .finder-container {
-     @apply w-full h-full grid grid-cols-4 bg-app-white-150 relative;
+ .finder-container {
+     @apply w-full h-full grid grid-cols-4 bg-app-white-150 dark:bg-app-darkBlue-200 relative;
  }
 
  .finder-main {
-     @apply col-span-3 grid grid-rows-12;
+     @apply col-span-3 grid grid-rows-12 bg-app-white-100 dark:bg-app-darkBlue-100;
  }
 
  .finder-breadcrumb-row {
-     @apply row-span-1 border-b border-solid border-b-app-gray-100/20 flex flex-row items-center px-5 font-inter text-lg;
+     @apply row-span-1 flex flex-row items-start ;
  }
 
  .finder-filegrid-wrapper {
@@ -21,63 +21,9 @@
  }
 
  .finder-filetile {
-     @apply h-full flex relative flex-col justify-end items-center pb-1 cursor-pointer hover:bg-gray-200/50;
+     @apply h-full flex relative flex-col justify-end items-center pb-1 cursor-pointer hover:bg-gray-200/50 dark:hover:bg-app-dark-300/60;
  }
 
  .finder-filename {
-     @apply text-center font-inter text-xs md:text-sm px-3  line-clamp-1 overflow-hidden;
- } */
-
- @reference "#indexcss";
-
-.finder-container {
-  @apply w-full h-full grid grid-cols-4 
-         bg-app-white-150 
-         dark:bg-app-darkBlue-200 
-         relative;
-}
-
-.finder-main {
-  @apply col-span-3 grid grid-rows-12 
-         bg-app-white-100 
-         dark:bg-app-darkBlue-100;
-}
-
-.finder-breadcrumb-row {
-  @apply row-span-1 
-         border-b border-solid 
-         border-b-app-gray-100/20 
-         dark:border-b-gray-300/50
-         flex flex-row items-center 
-         px-5 
-         font-inter text-lg
-         bg-app-white-200 
-         dark:bg-app-darkBlue-700;
-}
-
-.finder-filegrid-wrapper {
-  @apply row-span-10;
-}
-
-.finder-filegrid {
-  @apply grid grid-cols-6 grid-rows-4 
-         gap-5 h-full 
-         pt-5 px-5;
-}
-
-.finder-filetile {
-  @apply h-full flex relative flex-col 
-         justify-end items-center 
-         pb-1 cursor-pointer 
-         hover:bg-gray-200/50 
-         dark:hover:bg-app-dark-300/60;
-}
-
-.finder-filename {
-  @apply text-center font-inter 
-         text-xs md:text-sm 
-         px-3 
-         line-clamp-1 overflow-hidden
-         text-app-gray-500 
-         dark:text-app-text-white-100;
-}
+     @apply text-center font-inter text-xs md:text-sm px-3 line-clamp-1 overflow-hidden text-app-gray-500 dark:text-app-text-white-100;
+ }

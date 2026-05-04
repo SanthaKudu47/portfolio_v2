@@ -1,5 +1,6 @@
 import { AiFillHome } from "react-icons/ai";
 import { Fragment } from "react/jsx-runtime";
+import { TfiHome } from "react-icons/tfi";
 
 import "./breadcrumb.css";
 
@@ -51,8 +52,8 @@ export default function Breadcrumb({
         }}
         className="breadcrumb-home"
       >
-        <AiFillHome className="text-base" />
-        <span className="font-medium">HOME</span>
+        <TfiHome className="text-base" />
+        <span className="font-medium flex">HOME</span>
       </button>
 
       <div className="hidden md:flex flex-row">
