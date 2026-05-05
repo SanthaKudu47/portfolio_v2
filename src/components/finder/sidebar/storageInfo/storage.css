@@ -22,7 +22,7 @@
  }
 
  .storage-bar-fill {
-     @apply h-full bg-app-blue-matt dark:bg-app-blue-matt rounded-full transition-all duration-300;
+     @apply h-full bg-app-blue-matt dark:bg-app-blue-bright-100 rounded-full transition-all duration-300;
  }
 
  .storage-text {

@@ -6,7 +6,7 @@
  }
 
  .top-bar-search-icon {
-     @apply cursor-pointer h-full w-7 justify-center items-center flex dark:text-gray-300 text-app-title-bar-text-light
+     @apply cursor-pointer h-full w-7 justify-center items-center flex dark:text-app-gray-400 text-app-title-bar-text-light
  }
 
  .top-bar-title {
@@ -14,7 +14,7 @@
  }
 
  .top-bar-controllers {
-     @apply flex flex-row gap-x-1 items-center dark:text-gray-300
+     @apply flex flex-row gap-x-1 items-center dark:text-app-gray-400
  }
 
  .top-bar-controllers-block {

@@ -5,7 +5,7 @@
  }
 
  .finder-main {
-     @apply col-span-3 grid grid-rows-12 bg-app-white-100 dark:bg-app-darkBlue-100;
+     @apply col-span-3 grid grid-rows-12 bg-app-white-100 dark:bg-app-darkBlue-300;
  }
 
  .finder-breadcrumb-row {

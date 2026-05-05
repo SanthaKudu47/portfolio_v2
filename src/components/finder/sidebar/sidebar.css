@@ -1,7 +1,7 @@
  @reference "#indexcss";
 
  .sidebar-container {
-     @apply col-span-1 grid grid-rows-12 bg-app-white-200 dark:bg-app-darkBlue-700;
+     @apply col-span-1 grid grid-rows-12 bg-app-white-200 dark:bg-app-darkBlue-200;
  }
 
  .sidebar-header {

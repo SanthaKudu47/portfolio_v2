@@ -7,7 +7,6 @@ import type { PropsToInner } from "../types";
 import Breadcrumb from "../breadcrumb/breadcrumb";
 import Sidebar from "../sidebar/sidebar";
 import FinderFooter from "../footer/finderFooter";
-import { MdLaptopWindows } from "react-icons/md";
 import FinderMobile from "../mobile/FinderMobile";
 import withDirHandlerWrapper from "./dirHandler";
 import "./finder.css";
@@ -29,7 +28,7 @@ function FinderInner({
       {/* Main */}
       <div className="finder-main">
         <div className="finder-breadcrumb-row">
-          <div className="w-full flex h-10 px-2  border-solid border-b-app-title-bar-border-light border-b dark:border-b-gray-300/50 font-inter text-lg bg-app-white-100 dark:bg-app-darkBlue-700 ">
+          <div className="w-full flex h-10 px-2  border-solid border-b-app-title-bar-border-light border-b dark:border-b-app-darkBlue-100 font-inter text-lg bg-app-white-100 dark:bg-app-darkBlue-300">
             <Breadcrumb
               paths={paths}
               resetDirAndPaths={reset}
@@ -84,7 +83,7 @@ function FinderInner({
         </div>
 
         <div className="w-full row-span-1 items-end flex">
-          <div className="w-full h-10  bg-app-white-100 dark:bg-app-darkBlue-700  border-solid border-t-app-title-bar-border-light border-t">
+          <div className="w-full h-10  bg-app-white-100 dark:bg-app-darkBlue-300  border-solid border-t-app-title-bar-border-light dark:border-t-app-darkBlue-100 border-t">
             <FinderFooter items={currentDir.length} size={24587} />
           </div>
         </div>

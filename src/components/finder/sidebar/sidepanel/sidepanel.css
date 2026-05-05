@@ -6,10 +6,10 @@
          flex flex-col w-full h-full  
          bg-app-gray-50
          md:bg-app-white-200 
-         dark:bg-app-darkBlue-700 
+         dark:bg-app-darkBlue-200
          justify-center md:justify-start 
          border-y border-solid border-y-app-gray-60
-         dark:border-x-app-dark-300;
+         dark:border-y-app-darkBlue-100;
 }
 
 .sidepanel-title {
@@ -28,9 +28,9 @@
 }
 
 .sidepanel-item-icon {
-  @apply text-xl text-app-gray-500 dark:text-app-gray-300 ;
+  @apply text-xl text-app-gray-500 dark:text-app-gray-400 ;
 }
 
 .sidepanel-item-text {
-  @apply hidden md:block dark:text-app-text-white-100;
+  @apply hidden md:block dark:text-app-gray-400;
 }
