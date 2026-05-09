@@ -1,7 +1,7 @@
  @reference "#indexcss";
 
  .hero-section {
-   @apply absolute inset-0 bg-app-white-300 dark:bg-app-darkBlue-300 h-screen flex pt-9;
+   @apply absolute inset-0 bg-app-white-300 dark:bg-app-darkBlue-500 h-screen flex pt-9;
  }
 
  .hero-container {
@@ -9,11 +9,11 @@
  }
 
  .hero-heading {
-   @apply font-inter py-10 sm:py-14 lg:py-7 sm:my-2 text-5xl md:text-6xl lg:text-7xl mx-auto dark:text-app-darkBlue-100 text-app-darkBlue-100 font-bold;
+   @apply font-inter py-10 sm:py-14 lg:py-7 sm:my-2 text-5xl md:text-6xl lg:text-7xl mx-auto dark:text-app-text-white-100 text-app-darkBlue-100 font-bold;
  }
 
  .hero-heading-visitor {
-   @apply text-2xl sm:text-lg lg:text-2xl sm:sm:inline mt-2 sm:mt-0 px-2 py-1 w-fit mx-auto block bg-app-gray-100 rounded-sm text-app-white-100
+   @apply text-2xl sm:text-lg lg:text-2xl sm:sm:inline mt-2 sm:mt-0 px-2 py-1 w-fit mx-auto block bg-app-gray-100 dark:bg-app-white-100 rounded-sm text-app-white-100 dark:text-app-gray-100
  }
 
  .hero-intro-wrapper {
@@ -21,15 +21,15 @@
  }
 
  .hero-intro-line {
-   @apply mx-auto text-gray-600;
+   @apply mx-auto text-gray-600 dark:text-app-gray-400;
  }
 
  .hero-intro-line-second {
-   @apply mx-auto text-gray-600 my-2;
+   @apply mx-auto text-gray-600 my-2 dark:text-app-gray-400;
  }
 
  .hero-name-tag {
-   @apply mx-2 bg-app-blue-bright-100 p-1 rounded-sm lg:rotate-12 inline-block text-app-dark-700 hover:rotate-6;
+   @apply mx-2 sm:mx-0 bg-app-blue-bright-100 p-1 rounded-sm lg:rotate-12 inline-block text-app-dark-700 dark:bg-app-blue-matt dark:text-app-white-100 hover:rotate-6;
  }
 
  .hero-name-inner {
@@ -37,7 +37,7 @@
  }
 
  .hero-role-tag {
-   @apply text-app-text-white-100 mr-2 sm:mx-2 bg-app-darkBlue-100 px-1 inline-block rounded-xs lg:-rotate-3 hover:-rotate-1;
+   @apply   my-1 font-semibold font-inter text-app-text-white-100 dark:text-app-darkBlue-100 mr-2 sm:mx-2 bg-app-darkBlue-100 dark:bg-app-white-100 px-1 inline-block rounded-xs lg:-rotate-3 hover:-rotate-1;
  }
 
  .hero-role-inner {
@@ -45,7 +45,7 @@
  }
 
  .hero-second-line {
-   @apply mx-auto text-lg sm:text-2xl lg:text-4xl 2xl:mt-16 text-center text-app-dark-300 opacity-0  mt-5 sm:mt-10;
+   @apply mx-auto text-lg sm:text-2xl lg:text-4xl 2xl:mt-16 text-center text-app-dark-300 opacity-0  mt-5 sm:mt-10 dark:text-app-white-100;
  }
 
  .hero-artwork-wrapper {

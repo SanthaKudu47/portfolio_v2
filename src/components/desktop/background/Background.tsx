@@ -25,9 +25,17 @@ export default function Background() {
     };
   }, []);
   return (
-    <div className="absolute inset-0" ref={bgContainer}>
-      <BgPattern fill="green" opacity={0.3} id="dotGrid1" />
-      <BgPattern fill="green" opacity={0.5} id="dotGrid2" cls="mask-dynamic" />
-    </div>
+    <>
+      
+      <div className="absolute inset-0" ref={bgContainer}>
+        <BgPattern fill="#ACAAB5" opacity={0.2} id="dotGrid1" />
+        <BgPattern
+          fill="#5EB4FF"
+          opacity={1}
+          id="dotGrid2"
+          cls="mask-dynamic"
+        />
+      </div>
+    </>
   );
 }

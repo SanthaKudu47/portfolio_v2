@@ -48,7 +48,7 @@ export default function Desktop() {
                 </span>
                 <span className="block my-1">
                   I'm {" "}
-                  <span className="bg-app-darkBlue-100 text-app-white-100 py-1 px-1 rounded-sm">
+                  <span className="bg-app-darkBlue-100 text-app-white-100 dark:text-app-darkBlue-100 dark:bg-app-white-100 py-1 px-1 rounded-sm">
                     actively looking
                   </span>{" "}
                   for my next
