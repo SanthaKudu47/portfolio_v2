@@ -5,11 +5,11 @@
 }
 
 .finder-mobile-breadcrumb {
-  @apply row-span-1 flex justify-start flex-row px-3 bg-app-gray-50 border-solid border-y border-y-app-gray-60;
+  @apply row-span-1 flex justify-start flex-row px-3 bg-app-gray-50 dark:bg-app-darkBlue-200 border-solid border-b border-b-app-gray-60 dark:border-b-app-darkBlue-100;
 }
 
 .finder-mobile-content {
-  @apply w-full row-span-8 overflow-scroll bg-app-white-100;
+  @apply w-full row-span-8 overflow-scroll bg-app-white-100 dark:bg-app-darkBlue-300;
 }
 
 .finder-mobile-grid {
@@ -53,7 +53,7 @@
 }
 
 .finder-mobile-footer-section {
-  @apply row-span-2 flex flex-col justify-between bg-app-white-100 dark:bg-app-darkBlue-700;
+  @apply row-span-2 flex flex-col justify-between bg-app-white-100 dark:bg-app-darkBlue-300;
 }
 
 .finder-mobile-footer-wrapper {

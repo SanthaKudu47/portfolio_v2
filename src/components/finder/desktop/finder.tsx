@@ -20,10 +20,12 @@ function FinderInner({
   paths,
   reset,
   updateDirPath,
+  setActiveDir,
+  activeDirTag,
 }: PropsToInner) {
   return (
     <div className="finder-container">
-      <Sidebar />
+      <Sidebar setActiveDir={setActiveDir} activeDirTag={activeDirTag} />
 
       {/* Main */}
       <div className="finder-main">

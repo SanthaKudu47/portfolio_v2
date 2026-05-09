@@ -1,3 +1,4 @@
+import type { DirTagTypes, FileInfoType } from "@components/finder/types";
 import type { RefObject } from "react";
 
 type ModeType = "LIGHT" | "DARK";
@@ -41,4 +42,11 @@ export interface WindowSlice {
   updateIndex: (index: number) => void;
   setFilePath: (url: string) => void;
   setPdfFilePath: (url: string) => void;
+}
+
+
+export interface DirSlice {
+  activeDir: FileInfoType[];
+  getCurrentDir: () => FileInfoType[];
+  setDir: (tag: DirTagTypes) => void;
 }

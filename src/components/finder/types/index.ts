@@ -10,15 +10,20 @@ export type FileInfoType = {
   subFolder?: FileInfoType[];
 };
 
+export type DirTagTypes = "work" | "about" | "resume" | "trash";
+
 export type SidePanelItem = {
   text: string;
   Icon: IconType;
+  tag: DirTagTypes;
 };
 
 export interface PropsToInner {
   currentDir: FileInfoType[];
   paths: string[];
   reset: () => void;
-  openFolder: (param: string, type:FileTypes,url?:string) => void;
+  openFolder: (param: string, type: FileTypes, url?: string) => void;
   updateDirPath: (param: string) => void;
+  setActiveDir: (tag: DirTagTypes) => void;
+  activeDirTag: DirTagTypes;
 }
