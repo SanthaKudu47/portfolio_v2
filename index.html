@@ -4,10 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ⭐ Preload Tailwind to prevent layout flicker -->
+    <link rel="preload" href="/src/index.css" as="style" />
+    <link rel="stylesheet" href="/src/index.css" onload="document.body.style.visibility='visible'" />
     <title>portfolio_v2_santha</title>
   </head>
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+   
   </body>
 </html>
