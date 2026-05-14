@@ -7,7 +7,17 @@
 
     <!-- ⭐ Preload Tailwind to prevent layout flicker -->
     <link rel="preload" href="/src/index.css" as="style" />
-    <link rel="stylesheet" href="/src/index.css" onload="document.body.style.visibility='visible'" />
+
+    <!-- pre load imgs-->
+    <link rel="preload" as="image" href="/images/light.jpg" />
+    <link rel="preload" as="image" href="/images/dark.jpg" />
+
+    <link
+      rel="stylesheet"
+      href="/src/index.css"
+      onload="document.body.style.visibility = 'visible'"
+    />
+
     <title>portfolio_v2_santha</title>
   </head>
   <style>
@@ -16,8 +26,11 @@
     }
   </style>
   <body>
+    <!--decode -->
+    <img src="/images/light.jpg" style="display: none" alt="" />
+    <img src="/images/dark.jpg" style="display: none" alt="" />
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-   
   </body>
 </html>

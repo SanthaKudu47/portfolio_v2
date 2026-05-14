@@ -13,6 +13,7 @@ import Contacts from "@components/contacts/contacts";
 import ImageViewer from "@components/imageViewer/imageViewer";
 import PDFViewer from "@components/pdfViewer/pdfViewer";
 
+
 gsap.registerPlugin(Draggable);
 
 function App() {
@@ -28,8 +29,8 @@ function App() {
       <Gallery />
       <Contacts />
       <Terminal />
-      <ImageViewer/>
-      <PDFViewer/>
+      <ImageViewer />
+      <PDFViewer />
       <DockCmp />
       {/* <WindowWrapper/> */}
       {/* <ArtWorkLg /> */}

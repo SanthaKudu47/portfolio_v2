@@ -97,7 +97,8 @@ export default function Dock() {
 
   return (
     <div className="dock-container animate-dockIn opacity-0">
-      <div className="dock" ref={dockRef}>
+      <div className="dock relative" ref={dockRef}>
+       
         {dockItems.map((item) => (
           <DockIcon
             key={item.id}

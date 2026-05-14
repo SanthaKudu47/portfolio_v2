@@ -1,4 +1,5 @@
 import Dock from "./desktop/dock";
+import { FolderIcon } from "./icons";
 import DockMobile from "./mobile/dock";
 
 export default function DockCmp() {
