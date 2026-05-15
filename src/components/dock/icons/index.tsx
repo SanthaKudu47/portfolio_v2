@@ -45,3 +45,5 @@ export function BinIcon() {
     </div>
   );
 }
+
+//mobile icons

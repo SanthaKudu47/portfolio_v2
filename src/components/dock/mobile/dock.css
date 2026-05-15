@@ -5,13 +5,13 @@
  }
 
  .dock-mobile {
-     @apply flex h-14 rounded-sm mb-3 shadow-2xl bg-app-white-100/50 dark:bg-app-darkBlue-700 outline-1 outline-app-gray-400 dark:outline-app-darkBlue-100 gap-x-5 justify-evenly px-4 relative
+     @apply flex h-14 rounded-xs mb-3 shadow-2xl backdrop-opacity-10 bg-white/20 dark:bg-black/30 outline-1 outline-app-gray-400 dark:outline-app-darkBlue-100 gap-x-5 justify-evenly  relative
  }
 
  .dock-mobile-icon-wrapper {
      @apply cursor-pointer relative flex justify-center my-2 rounded-xs w-10 border border-transparent
  }
-
+x
  .dock-mobile-icon-wrapper-bg {
      @apply w-6 h-full absolute flex bottom-0
  }
