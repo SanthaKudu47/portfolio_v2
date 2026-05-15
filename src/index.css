@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
 
 @import "tailwindcss";
@@ -13,6 +14,7 @@
     --color-app-darkBlue-100: #252530;
     --color-app-darkBlue-200: #191922;
     --color-app-darkBlue-300: #13131B;
+    --color-app-darkBlue-400: #242938;
     --color-app-darkBlue-500: #13131B;
     --color-app-darkBlue-700: #0D0D15;
 
@@ -20,19 +22,30 @@
     --color-app-dark-700: #171720;
 
 
+    --color-app-gray-50: #F8F8F8;
+    --color-app-gray-60: #EAEAEA;
     --color-app-gray-100: #617289;
     --color-app-gray-300: #A8A7B1;
     --color-app-gray-400: #ABA9B4;
-    --color-app-gray-500: #3F4852;
     --color-app-gray-450: #ACAAB5;
+    --color-app-gray-460: #777680;
+    --color-app-gray-500: #3F4852;
 
 
     --color-app-text-white-100: #EFECF8;
 
     --color-app-blue-bright-100: #5EB4FF;
+    --color-app-blue-matt: #0072B3;
+
+    --color-app-title-bar-text-light: #3F4852;
+    --color-app-title-bar-border-light: #F1F2F3;
+
+
+
 
 
     --font-inter: "Inter", sans-serif;
+    --font-pt-mono: "PT Mono", monospace;
 }
 
 #root {

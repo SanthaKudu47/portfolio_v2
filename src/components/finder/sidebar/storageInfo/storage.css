@@ -1,32 +1,30 @@
  @reference "#indexcss";
 
+
  .storage-container {
-     @apply w-full px-5 py-4 flex flex-col gap-2 ;
+     @apply w-full px-3 py-2 flex flex-col gap-1 md:px-5 md:gap-2;
  }
 
- /* Top row: STORAGE + percentage */
  .storage-header {
-     @apply flex flex-row justify-between items-center px-1;
+     @apply flex flex-row justify-between items-center px-0 md:px-1;
  }
 
  .storage-title {
-     @apply text-sm font-inter text-app-gray-500 font-bold tracking-wide;
+     @apply text-xs font-inter text-app-gray-500 dark:text-app-gray-300 font-bold tracking-wide md:text-sm;
  }
 
  .storage-percent {
-     @apply text-sm font-inter text-app-gray-400;
+     @apply text-xs font-inter text-app-gray-500 md:text-sm dark:text-app-gray-300;
  }
 
- /* Progress bar */
  .storage-bar-wrapper {
-     @apply w-full h-2 bg-app-white-150 rounded-full overflow-hidden;
+     @apply w-full h-1.5 bg-app-white-150 rounded-full overflow-hidden md:h-2;
  }
 
  .storage-bar-fill {
-     @apply h-full bg-app-blue-bright-100 rounded-full transition-all duration-300;
+     @apply h-full bg-app-blue-matt dark:bg-app-blue-bright-100 rounded-full transition-all duration-300;
  }
 
- /* Bottom text */
  .storage-text {
-     @apply text-xs font-inter text-app-gray-500/60;
+     @apply text-[10px] font-inter text-app-gray-500/60 dark:text-gray-200/50 md:text-xs;
  }

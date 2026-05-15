@@ -24,7 +24,7 @@ const dockItems = [
 ];
 
 export default function Dock() {
-  const toggleVisibility = useAppStore((state) => state.updateVisibility);
+  const openWindowByName = useAppStore((state) => state.openWindow);
   const dockRef = useRef<HTMLDivElement | null>(null);
   gsap.registerPlugin(useGSAP);
 
@@ -97,13 +97,14 @@ export default function Dock() {
 
   return (
     <div className="dock-container animate-dockIn opacity-0">
-      <div className="dock" ref={dockRef}>
+      <div className="dock relative" ref={dockRef}>
+       
         {dockItems.map((item) => (
           <DockIcon
             key={item.id}
             text={item.text}
             Icon={item.icon}
-            onClick={() => toggleVisibility(item.id)}
+            onClick={() => openWindowByName(item.id)}
           />
         ))}
       </div>

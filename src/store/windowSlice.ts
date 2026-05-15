@@ -6,6 +6,8 @@ import {
   type WindowSlice,
 } from "./sliceTypes";
 
+const zIndex = 20;
+
 export const createWindowSlice: StateCreator<
   WindowSlice & NavSlice & SystemSlice,
   [],
@@ -14,13 +16,20 @@ export const createWindowSlice: StateCreator<
 > = (set, get) => {
   return {
     windows: InitialWindowsState,
-    currentIndex: 1000,
+    currentIndex: zIndex,
+    
     getCurrentIndex: () => {
       return get().currentIndex;
     },
     getWindowByName: (name) => {
       return get().windows[name];
     },
+
+    getIndexByName: (name) => {
+      return get().windows[name].index;
+    },
+
+    updateIndex: (index) => set((state) => ({ ...state, currentIndex: index })),
 
     updateVisibility: (name) =>
       set((state) => ({
@@ -30,7 +39,9 @@ export const createWindowSlice: StateCreator<
           [name]: {
             ...state.windows[name],
             isOpened: !state.windows[name].isOpened,
-            index: 0,
+            index: !state.windows[name].isOpened
+              ? state.currentIndex + 1
+              : zIndex,
           },
         },
       })),
@@ -43,7 +54,7 @@ export const createWindowSlice: StateCreator<
           [name]: {
             ...state.windows[name],
             isOpened: false,
-            index: 0,
+            index: zIndex,
           },
         },
       })),
@@ -53,12 +64,17 @@ export const createWindowSlice: StateCreator<
         ...state,
         windows: {
           ...state.windows,
+
           [name]: {
             ...state.windows[name],
             isOpened: true,
-            index: 0,
+            index: state.currentIndex + 1,
           },
         },
+        currentIndex: state.currentIndex + 1,
       })),
+
+    setFilePath: (url) => set((state) => ({ ...state, filePath: url })),
+    setPdfFilePath: (url) => set((state) => ({ ...state, pdfPath: url })),
   };
 };

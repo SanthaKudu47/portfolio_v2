@@ -4,9 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ⭐ Preload Tailwind to prevent layout flicker -->
+    <link rel="preload" href="/src/index.css" as="style" />
+
+    <!-- pre load imgs-->
+    <link rel="preload" as="image" href="/images/light.jpg" />
+    <link rel="preload" as="image" href="/images/dark.jpg" />
+
+    <link
+      rel="stylesheet"
+      href="/src/index.css"
+      onload="document.body.style.visibility = 'visible'"
+    />
+
     <title>portfolio_v2_santha</title>
   </head>
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
   <body>
+    <!--decode -->
+    <img src="/images/light.jpg" style="display: none" alt="" />
+    <img src="/images/dark.jpg" style="display: none" alt="" />
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

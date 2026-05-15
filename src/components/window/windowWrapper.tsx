@@ -15,7 +15,14 @@ import TooltipWrapper from "@components/tooltip/wrapper";
 import { useAppStore } from "@store";
 
 interface WrapperProps {
-  windowId: "terminal" | "bin" | "finder" | "browser" | "gallery" | "contacts";
+  windowId:
+    | "terminal"
+    | "bin"
+    | "finder"
+    | "browser"
+    | "gallery"
+    | "contacts"
+    | "imageViewer"|"pdfViewer"
   title: string;
   Icon: () => JSX.Element;
 }
@@ -33,13 +40,19 @@ export default function withWindowWrapper<P extends object>(
     const windowRef = useRef<HTMLDivElement | null>(null);
     const draggableRef = useRef<globalThis.Draggable | null>(null);
     const closeWindow = useAppStore((state) => state.closeWindow);
+    const currentIndex = useAppStore((state) => state.currentIndex);
+    const updateIndex = useAppStore((state) => state.updateIndex);
+
     useGSAP(() => {
+      console.log("CurrentIndex->", currentIndex);
       const element = windowRef.current;
       if (!element) return;
+      gsap.set(element, { zIndex: currentIndex });
       const elements = Draggable.create(element, {
         inertia: false,
-        onDragEnd: () => {
-          console.log(elements);
+        onDragEnd: () => {},
+        onClick: () => {
+          updateIndex(+element.style.zIndex);
         },
       });
       draggableRef.current = elements[0];

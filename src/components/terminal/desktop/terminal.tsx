@@ -7,8 +7,6 @@ import "./terminal.css";
 import TerminalMobile from "../mobile/terminalMobile";
 import { useAppStore } from "@store";
 
-type TerminalLines = { [key: string]: boolean };
-
 function TerminalInner() {
   const [step, setState] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -28,7 +26,7 @@ function TerminalInner() {
       <TerminalCommandBlock
         commandOptions={{
           blinking: false,
-          cls: "text-bold",
+          cls: "text-bold text-app-gray-300 font-pt-mono",
           command: "whoami",
           eventName: "whoami-event-1",
           prefix: "~/dev",
@@ -42,7 +40,7 @@ function TerminalInner() {
         <TerminalCommandBlock
           commandOptions={{
             blinking: false,
-            cls: "text-bold",
+            cls: "text-bold text-app-gray-300 font-pt-mono",
             command: "ls --stack",
             eventName: "stack-event",
             prefix: "~/skills",
@@ -61,20 +59,28 @@ export default function Terminal() {
   const { isOpened } = useAppStore((state) =>
     state.getWindowByName("terminal"),
   );
-  console.log("IsTerminalOpened", isOpened);
+
   return (
     <>
-      <div className="lg:hidden flex w-full h-full relative z-10 ">
-        <TerminalMobile Icon={() => <CiLock />} title="Terminal" />
-      </div>
       {isOpened && (
-        <div className="hidden lg:absolute inset-0 lg:flex justify-center items-center">
-          <TerminalWrapped
-            windowId="terminal"
-            Icon={() => <CiLock />}
-            title="root@lumina-os: `/dev/stack"
-          />
-        </div>
+        <>
+          <div className="lg:hidden flex w-full h-full relative z-20">
+            <TerminalMobile
+              Icon={() => <CiLock />}
+              title="Terminal"
+              windowId="terminal"
+            />
+          </div>
+          <div className="hidden lg:absolute inset-0 lg:flex justify-center items-center">
+            <TerminalWrapped
+              windowId="terminal"
+              Icon={() => <CiLock />}
+              title="root@lumina-os: `/dev/stack"
+            />
+          </div>
+
+          {/* </div> */}
+        </>
       )}
     </>
   );

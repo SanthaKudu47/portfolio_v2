@@ -1,0 +1,24 @@
+@reference "#indexcss";
+
+.thumbnail-viewer {
+  @apply w-6/8 h-7/8
+         dark:bg-app-darkBlue-100
+         rounded-md
+         overflow-hidden
+         flex items-center justify-center
+         relative;
+}
+
+.thumbnail-viewer-skeleton {
+  @apply absolute inset-0
+         animate-pulse
+         bg-app-white-200;
+}
+
+.thumbnail-viewer-image {
+  @apply w-full h-full
+         object-cover
+         transition-opacity duration-300
+         opacity-0
+         [&.loaded]:opacity-100;
+}

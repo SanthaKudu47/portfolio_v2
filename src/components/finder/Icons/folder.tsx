@@ -1,3 +1,5 @@
+import { useAppStore } from "@store";
+
 export default function FolderIcon({
   width = "285",
   height = "229",
@@ -7,6 +9,7 @@ export default function FolderIcon({
   height?: string;
   fill?: string;
 }) {
+  const mode = useAppStore((state) => state.mode);
   return (
     <svg
       width={width}
@@ -17,7 +20,7 @@ export default function FolderIcon({
     >
       <path
         d="M111.446 0C111.726 0 112.007 0.00392669 112.285 0.0126585L140.341 28.0849H155.455L155.258 27.8887C156.306 28.0144 157.369 28.0849 158.44 28.0849H254.773C271.467 28.0849 285 41.6262 285 58.3302V198.755C285 215.459 271.467 229 254.773 229H30.2273C13.5332 229 0 215.459 0 198.755V28.0849C0 12.574 12.5666 0 28.0682 0H111.446Z"
-        fill={fill}
+        fill={mode==='DARK'?fill:'#0072B3'}
       />
     </svg>
   );

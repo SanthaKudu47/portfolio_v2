@@ -9,8 +9,8 @@ const TerminalMobileInner = function TerminalMobile() {
     setState(1);
   }
   return (
-    <div className="w-full h-full bg-app-white-150 px-2 relative">
-      <span className="block w-fit font-inter text-sm px-2">
+    <div className="w-full h-full relative px-3 pt-2">
+      <span className="block w-fit font-inter text-sm px-3 dark:text-app-gray-400">
         root@lumina-os: `/dev/stack
       </span>
       <div className="terminal-header">
@@ -22,7 +22,7 @@ const TerminalMobileInner = function TerminalMobile() {
       <TerminalCommandBlock
         commandOptions={{
           blinking: false,
-          cls: "text-bold",
+          cls: "text-bold text-app-gray-300 font-pt-mono ",
           command: "whoami",
           eventName: "whoami-event-1",
           prefix: "~/dev",
@@ -36,7 +36,7 @@ const TerminalMobileInner = function TerminalMobile() {
         <TerminalCommandBlock
           commandOptions={{
             blinking: false,
-            cls: "text-bold",
+            cls: "text-bold text-app-gray-300 font-pt-mono",
             command: "ls --stack",
             eventName: "stack-event",
             prefix: "~/skills",

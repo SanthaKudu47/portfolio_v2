@@ -1,0 +1,21 @@
+ @reference "#indexcss";
+
+ .breadcrumb-container {
+     @apply flex items-center font-inter text-sm select-none z-50 rounded-none md:rounded-md text-app-gray-300;
+ }
+
+ .breadcrumb-home {
+     @apply flex flex-row gap-x-2 hover:text-app-gray-500 transition-colors cursor-pointer text-app-gray-460;
+ }
+
+ .breadcrumb-chevron {
+     @apply text-app-gray-460 px-1 cursor-pointer;
+ }
+
+ .breadcrumb-segment {
+     @apply hover:text-app-gray-500 transition-colors text-app-gray-460 cursor-pointer;
+ }
+
+ .breadcrumb-segment-active {
+     @apply text-app-dark-700 dark:text-app-blue-matt font-semibold cursor-default;
+ }

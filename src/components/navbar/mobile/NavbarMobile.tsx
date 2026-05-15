@@ -1,4 +1,7 @@
 import { formatTimeToMobileView } from "@utils";
+import { IoSettingsSharp } from "react-icons/io5";
+import { FaWifi } from "react-icons/fa";
+import { MdBatteryCharging80 } from "react-icons/md";
 import "../navbar.css";
 import { useAppStore } from "@store";
 export default function NavBarMobile() {
@@ -11,10 +14,10 @@ export default function NavBarMobile() {
       </div>
       <div className="navbar-status">
         <button onClick={toggleMenu}>
-          <img src="/system_icon.svg" alt="system" className="status-icon" />
+          <IoSettingsSharp className="status-icon"/>
         </button>
-        <img src="/wifi_icon.svg" alt="network_icon" className="status-icon" />
-        <img src="/battery_icon.svg" alt="wifi_icon" className="status-icon" />
+        <FaWifi className="status-icon" />
+        <MdBatteryCharging80 className="status-icon" />
         <p className="shrink-0 navbar-datetime">{formatTimeToMobileView()}</p>
       </div>
     </nav>

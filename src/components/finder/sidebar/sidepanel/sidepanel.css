@@ -1,0 +1,25 @@
+@reference "#indexcss";
+
+.sidepanel-container {
+  @apply px-5 md:border-b-2 md:border-solid md:border-b-app-gray-100/20 flex flex-col w-full h-full bg-app-gray-50 md:bg-app-white-200 dark:bg-app-darkBlue-200 justify-center md:justify-start border-y border-solid border-y-app-gray-60 dark:border-y-app-darkBlue-100;
+}
+
+.sidepanel-title {
+  @apply text-lg hidden md:inline dark:text-app-text-white-100;
+}
+
+.sidepanel-items-container {
+  @apply flex flex-row md:flex-col md:gap-y-2 md:py-5 md:px-3 w-full justify-between;
+}
+
+.sidepanel-item {
+  @apply flex flex-col md:flex-row items-center gap-x-3 hover:bg-gray-200 dark:hover:bg-gray-100 p-3 rounded-sm md:p-2 cursor-pointer;
+}
+
+.sidepanel-item-icon {
+  @apply text-xl;
+}
+
+.sidepanel-item-text {
+  @apply hidden md:block;
+}

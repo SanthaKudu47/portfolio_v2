@@ -1,19 +1,19 @@
  @reference "#indexcss";
 
  .sidebar-container {
-     @apply col-span-1 grid grid-rows-9 bg-app-white-200;
+     @apply col-span-1 grid grid-rows-12 bg-app-white-200 dark:bg-app-darkBlue-200;
  }
 
  .sidebar-header {
-     @apply row-span-1 flex flex-col font-inter px-5 pt-4;
+     @apply row-span-2 flex flex-col font-inter dark:text-app-white-200 justify-center px-5;
  }
 
  .sidebar-title {
-     @apply text-3xl;
+     @apply text-3xl font-inter;
  }
 
  .sidebar-subtitle {
-     @apply text-lg text-app-gray-300;
+     @apply text-base text-app-gray-300;
  }
 
  .sidebar-bottom {

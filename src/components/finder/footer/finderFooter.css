@@ -1,0 +1,13 @@
+ @reference "#indexcss";
+
+ .finder-footer {
+     @apply w-fit h-fit text-xs flex flex-row gap-x-10 px-3 md:px-5 font-inter text-app-gray-400 pt-1 md:h-full md:pt-3 md:text-sm;
+ }
+
+ .finder-footer-items {
+     @apply text-app-gray-400;
+ }
+
+ .finder-footer-size {
+     @apply text-app-gray-400;
+ }

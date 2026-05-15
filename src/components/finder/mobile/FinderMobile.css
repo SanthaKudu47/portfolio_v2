@@ -1,0 +1,61 @@
+@reference "#indexcss";
+
+.finder-mobile {
+  @apply bg-app-white-150 dark:bg-app-darkBlue-100 grid relative h-full grid-rows-12;
+}
+
+.finder-mobile-breadcrumb {
+  @apply row-span-1 flex justify-start flex-row px-3 bg-app-gray-50 dark:bg-app-darkBlue-200 border-solid border-b border-b-app-gray-60 dark:border-b-app-darkBlue-100;
+}
+
+.finder-mobile-content {
+  @apply w-full row-span-8 overflow-scroll bg-app-white-100 dark:bg-app-darkBlue-300;
+}
+
+.finder-mobile-grid {
+  @apply grid grid-cols-3 gap-3 px-2 font-inter dark:text-app-gray-300;
+}
+
+.finder-mobile-item-button {
+  @apply flex flex-col h-[150px] justify-between items-center relative p-1;
+}
+
+.finder-mobile-item-icon-container {
+  @apply w-full h-full flex justify-center items-center relative;
+}
+
+.finder-mobile-item-icon-size {
+  @apply w-1/2 relative h-1/2;
+}
+
+.finder-mobile-image-url-container {
+  @apply flex w-full h-full justify-center items-center;
+}
+
+.finder-mobile-image-icon-container {
+  @apply mx-auto my-auto justify-center items-center flex;
+}
+
+.finder-mobile-pdf-icon-size {
+  @apply w-1/2 relative h-1/2;
+}
+
+.finder-mobile-filename {
+  @apply text-center text-xs font-inter line-clamp-2;
+}
+
+.finder-mobile-filename-wrapper {
+  @apply w-full h-1/3;
+}
+
+.finder-mobile-sidebar {
+  @apply row-span-1 flex justify-center items-center;
+}
+
+.finder-mobile-footer-section {
+  @apply row-span-2 flex flex-col justify-between bg-app-white-100 dark:bg-app-darkBlue-300;
+}
+
+.finder-mobile-footer-wrapper {
+  @apply w-full h-full flex flex-col justify-center;
+}
