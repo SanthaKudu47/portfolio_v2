@@ -17,18 +17,10 @@ export const createWindowSlice: StateCreator<
   return {
     windows: InitialWindowsState,
     currentIndex: zIndex,
-    
-    getCurrentIndex: () => {
-      return get().currentIndex;
-    },
-    getWindowByName: (name) => {
-      return get().windows[name];
-    },
 
     getIndexByName: (name) => {
       return get().windows[name].index;
     },
-
     updateIndex: (index) => set((state) => ({ ...state, currentIndex: index })),
 
     updateVisibility: (name) =>

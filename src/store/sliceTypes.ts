@@ -33,8 +33,6 @@ export interface WindowSlice {
   currentIndex: number;
   filePath?: string;
   pdfPath?: string;
-  getCurrentIndex: () => number;
-  getWindowByName: (name: string) => { isOpened: boolean; index: number };
   getIndexByName: (name: string) => number;
   updateVisibility: (name: string) => void;
   closeWindow: (name: string) => void;
@@ -44,9 +42,42 @@ export interface WindowSlice {
   setPdfFilePath: (url: string) => void;
 }
 
-
 export interface DirSlice {
   activeDir: FileInfoType[];
-  getCurrentDir: () => FileInfoType[];
   setDir: (tag: DirTagTypes) => void;
 }
+
+export interface Notification {
+  id: string; // unique id
+  title: string; // short title
+  message: string; // main text
+  type: "auto" | "interactive"; // controls queue behavior
+  duration?: number; // only for auto-dismiss
+  icon?: string; // info | warning | ai | etc.
+
+  // optional rich content
+  links?: Array<{ label: string; href: string }>;
+  actions?: Array<{ label: string; action: string }>;
+}
+
+export interface NotificationSlice {
+  queue: Notification[]; // all pending notifications
+  current: Notification | null; // the one currently displayed
+  isShowing: boolean; // UI uses this to animate in/out
+}
+
+export interface UserSessionSlice {
+  userType: "visitor" | "recruiter" | null;
+  onboardingStep: number; // 0 = not started, 1 = welcome, 2 = mode selected
+  onboardingCompleted: boolean; // true after mode selection
+  aiAutoOpen: boolean; // open AI after recruiter mode?
+  firstVisit: boolean; // show hints only once
+}
+
+export const initialUserSession: UserSessionSlice = {
+  userType: null,
+  onboardingCompleted: false,
+  onboardingStep: 0,
+  aiAutoOpen: false,
+  firstVisit: true,
+};

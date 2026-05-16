@@ -95,9 +95,7 @@ function PDFViewerInner() {
 const PDFViewerInnerWrapped = withWindowWrapper(PDFViewerInner);
 
 function PDFViewer() {
-  const { isOpened } = useAppStore((state) =>
-    state.getWindowByName("pdfViewer"),
-  );
+  const { isOpened } = useAppStore((state) => state.windows["pdfViewer"]);
 
   return (
     <>
@@ -107,8 +105,8 @@ function PDFViewer() {
             <div className="w-full h-full">
               <PDFViewerMobile
                 Icon={() => <GrDocumentPdf />}
-               title="PDF Viewer"
-              windowId="pdfViewer"
+                title="PDF Viewer"
+                windowId="pdfViewer"
               />
             </div>
           </div>

@@ -53,9 +53,7 @@ function ImageViewerInner() {
 const ImageViewerWrapped = withWindowWrapper(ImageViewerInner);
 
 function ImageViewer() {
-  const { isOpened } = useAppStore((state) =>
-    state.getWindowByName("imageViewer"),
-  );
+  const { isOpened } = useAppStore((state) => state.windows["imageViewer"]);
   return (
     <>
       {isOpened && (

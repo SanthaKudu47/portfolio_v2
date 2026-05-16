@@ -56,9 +56,7 @@ function TerminalInner() {
 const TerminalWrapped = withWindowWrapper(TerminalInner);
 
 export default function Terminal() {
-  const { isOpened } = useAppStore((state) =>
-    state.getWindowByName("terminal"),
-  );
+  const { isOpened } = useAppStore((state) => state.windows["terminal"]);
 
   return (
     <>

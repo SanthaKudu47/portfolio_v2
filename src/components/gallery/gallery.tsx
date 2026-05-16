@@ -8,7 +8,7 @@ function GalleryInner() {
 const GalleryWrapped = withWindowWrapper(GalleryInner);
 
 export default function Gallery() {
-  const { isOpened } = useAppStore((state) => state.getWindowByName("gallery"));
+  const { isOpened } = useAppStore((state) => state.windows["gallery"]);
   return (
     <>
       {isOpened && (

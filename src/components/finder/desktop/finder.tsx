@@ -97,7 +97,7 @@ function FinderInner({
 const FinderWrapped = withWindowWrapper(withDirHandlerWrapper(FinderInner));
 
 export default function Finder() {
-  const { isOpened } = useAppStore((state) => state.getWindowByName("finder"));
+  const { isOpened } = useAppStore((state) => state.windows["finder"]);
   const title = "File Explorer";
   const TitleBarIcon = () => <TfiWindow />;
   const windowId = "finder";

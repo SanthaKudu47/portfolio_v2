@@ -8,7 +8,8 @@ function BrowserInner() {
 const BrowserWrapped = withWindowWrapper(BrowserInner);
 
 export default function Browser() {
-  const { isOpened } = useAppStore((state) => state.getWindowByName("browser"));
+  const { isOpened } = useAppStore((state) => state.windows["browser"]);
+  console.log("STATE->>", isOpened);
   return (
     <>
       {isOpened && (

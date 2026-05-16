@@ -8,9 +8,7 @@ function ContactsInner() {
 const ContactsWrapped = withWindowWrapper(ContactsInner);
 
 export default function Contacts() {
-  const { isOpened } = useAppStore((state) =>
-    state.getWindowByName("contacts"),
-  );
+  const { isOpened } = useAppStore((state) => state.windows["contacts"]);
   return (
     <>
       {isOpened && (
