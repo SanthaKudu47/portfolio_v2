@@ -47,7 +47,7 @@ export interface DirSlice {
   setDir: (tag: DirTagTypes) => void;
 }
 
-export interface Notification {
+export interface AppNotification {
   id: string; // unique id
   title: string; // short title
   message: string; // main text
@@ -61,9 +61,13 @@ export interface Notification {
 }
 
 export interface NotificationSlice {
-  queue: Notification[]; // all pending notifications
-  current: Notification | null; // the one currently displayed
+  queue: AppNotification[]; // all pending notifications
+  current: AppNotification | null; // the one currently displayed
   isShowing: boolean; // UI uses this to animate in/out
+  addToQueue: (notification: AppNotification) => void;
+  removeCurrent: () => void;
+  processQueue: () => void;
+  clearQueue: () => void;
 }
 
 export interface UserSessionSlice {
@@ -72,12 +76,9 @@ export interface UserSessionSlice {
   onboardingCompleted: boolean; // true after mode selection
   aiAutoOpen: boolean; // open AI after recruiter mode?
   firstVisit: boolean; // show hints only once
+  setUserType: (type: "visitor" | "recruiter" | null) => void;
+  setOnBoardingStep: (step: number) => void;
+  setOnboardingStatus: (state: boolean) => void;
+  setAiAutoOpenStatus: (step: boolean) => void;
+  setFirstVisitStatus: (step: boolean) => void;
 }
-
-export const initialUserSession: UserSessionSlice = {
-  userType: null,
-  onboardingCompleted: false,
-  onboardingStep: 0,
-  aiAutoOpen: false,
-  firstVisit: true,
-};
